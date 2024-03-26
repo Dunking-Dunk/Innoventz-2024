@@ -36,7 +36,7 @@ const Event = ({ navigate }) => {
         <div className='event' id='event'>
             <div className='event__container'>
                 <motion.h2 variants={fadeIn("right", "ease", 0, 1)} className='event__sub__title'>Events</motion.h2>
-                <Carousel elements={technicalEvent} onClick={handleRegisterClick} />
+                <Carousel elements={technicalEvent} onClick={navigate} />
             </div>
         </div>
     )

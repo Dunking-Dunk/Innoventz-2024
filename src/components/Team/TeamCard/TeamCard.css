@@ -51,6 +51,7 @@
 .team__card__name {
     font-size: 4rem;
     font-weight: bold;
+    text-align: center;
 }
 
 .team__card__footer {

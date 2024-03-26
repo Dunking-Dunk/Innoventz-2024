@@ -200,11 +200,11 @@ const HomeCanvas = ({ navigate }) => {
                             <Selection autoClear={false}>
                                 <EffectComposer disableNormalPass multisampling={1} >
                                     <Noise opacity={0.1} />
-                                    <ChromaticAberration blendFunction={BlendFunction.NORMAL}
-                                        offset={[0.005, 0.005]} />
+                                    {/* <ChromaticAberration blendFunction={BlendFunction.NORMAL}
+                                        offset={[0.005, 0.005]} /> */}
                                 </EffectComposer>
                                 <Select enabled>
-                                    <Particles {...props} />
+                                    <Particles {...props} size={10}/>
                                     <Plane />
                                 </Select>
                                 <Select>
@@ -224,7 +224,7 @@ const HomeCanvas = ({ navigate }) => {
                         )
                     }
                 </Suspense>
-                <Leva hidden />
+                
                 <Preload all />
             </Canvas >
 
