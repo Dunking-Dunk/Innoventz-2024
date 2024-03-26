@@ -2,12 +2,15 @@ import * as THREE from 'three'
 import { useMemo, useState, useRef } from 'react'
 import { createPortal, useFrame } from '@react-three/fiber'
 import { useFBO } from '@react-three/drei'
+import { useControls } from 'leva'
+
 import './simulationMaterial'
 import './dofPointsMaterial'
 
 export function Particles({ speed, fov, aperture, focus, curl, size = 100, ...props }) {
     const simRef = useRef()
     const renderRef = useRef()
+    const { particleColor } = useControls({ particleColor: '#4a00ad'})
 
     const [scene] = useState(() => new THREE.Scene())
     const [camera] = useState(() => new THREE.OrthographicCamera(-1, 1, 1, -1, 1 / Math.pow(2, 53), 1))
@@ -59,7 +62,7 @@ export function Particles({ speed, fov, aperture, focus, curl, size = 100, ...pr
                 scene
             )}
             <points {...props} position={[-10, -1, 0]}>
-                <dofPointsMaterial ref={renderRef} />
+                <dofPointsMaterial ref={renderRef} particleColor={particleColor}/>
                 <bufferGeometry>
                     <bufferAttribute attach="attributes-position" count={particles.length / 3} array={particles} itemSize={3} />
                 </bufferGeometry>

@@ -32,7 +32,7 @@ class DofPointsMaterial extends THREE.ShaderMaterial {
         uFocus: { value: 5.1 },
         uFov: { value: 50 },
         uBlur: { value: 30 },
-        uMouse: {value: null}
+        uMouse: {value: null},
       },
       transparent: true,
       blending: THREE.NormalBlending,

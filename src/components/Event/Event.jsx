@@ -17,8 +17,8 @@ import slide_image_9 from '../../assets/images/event posters/MANIFESTO MATRIX.pn
 
 const Event = ({ navigate }) => {
 
-    const technicalEvent = [<img src={slide_image_1} alt="slide_image" className='swiper-slide_img' />, 
-            <img src={slide_image_2} alt="slide_image" className='swiper-slide_img' />, 
+    const technicalEvent = [<img src={slide_image_1} alt="slide_image" className='swiper-slide_img' navigate={true}/>, 
+            <img src={slide_image_2} alt="slide_image" className='swiper-slide_img' navigate={true}/>, 
             <img src={slide_image_3} alt="slide_image" className='swiper-slide_img' />, 
             <img src={slide_image_4} alt="slide_image" className='swiper-slide_img' />, 
             <img src={slide_image_5} alt="slide_image" className='swiper-slide_img' />,
@@ -36,7 +36,7 @@ const Event = ({ navigate }) => {
         <div className='event' id='event'>
             <div className='event__container'>
                 <motion.h2 variants={fadeIn("right", "ease", 0, 1)} className='event__sub__title'>Events</motion.h2>
-                <Carousel elements={technicalEvent} onClick={navigate} />
+                <Carousel elements={technicalEvent}  navigate={navigate}/>
             </div>
         </div>
     )
