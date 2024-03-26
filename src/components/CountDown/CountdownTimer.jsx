@@ -6,7 +6,7 @@ const Countdown = () => {
     const [hours, setHours] = useState(0);
     const [minutes, setMinutes] = useState(0);
     const [seconds, setSeconds] = useState(0);
-    const [inputDate, setInputDate] = useState("4 Mar 2024");
+    const [inputDate, setInputDate] = useState("22 April 2024");
     const [currentDate, setCurrentDate] = useState(inputDate);
 
     useEffect(() => {

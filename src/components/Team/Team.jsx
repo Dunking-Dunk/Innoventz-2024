@@ -12,11 +12,11 @@ import img from '../../assets/images/img_1.jpg'
 import Carousel from '../Carousel/Carousel'
 
 const Team = () => {
-    const coordinator = [<Card name='Rissi Kumar P' designation='coordinator' image={Rissi} />, <Card name='Nikitha KR' designation='coordinator' image={Nikitha} />, <Card name='Pradeepta G' designation='coordinator' image={Pradeepta}/>,
-        <Card name='Kabilesh S' designation='coordinator' image={Kabilesh} />,<Card name='Sunil Kumar R' designation='coordinator' image={Sunil} />]
-    const faculty_coordinator=[<Card name='Mrs.P.Jayasri' designation='coordinator' image={Jay_Shree} />,
-                <Card name='Dr.Revatthy Krishnamurthy' designation='coordinator' image={Revatthy} />,
-                <Card name='Mrs.J.Adlin Loyola' designation='coordinator' image={img} />]
+    const coordinator = [<Card name='Rissi Kumar P' designation='Coordinator' image={Rissi} />, <Card name='Nikitha KR' designation='Coordinator' image={Nikitha} />, <Card name='Pradeepta G' designation='Coordinator' image={Pradeepta}/>,
+        <Card name='Kabilesh S' designation='Coordinator' image={Kabilesh} />,<Card name='Sunil Kumar R' designation='Coordinator' image={Sunil} />]
+    const faculty_coordinator=[<Card name='Mrs.P.Jayasri' designation='Coordinator' image={Jay_Shree} />,
+                <Card name='Dr.Revatthy Krishnamurthy' designation='Coordinator' image={Revatthy} />,
+                <Card name='Mrs.J.Adlin Loyola' designation='Coordinator' image={img} />]
     return (
         <div className='team' id='team'>
             <div className='team__container'>

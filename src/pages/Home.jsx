@@ -27,7 +27,8 @@ const Home = () => {
             <Team />
             <Gallery />
             <Contact />
-            <Footer /> */}
+             */}
+             
         </div >
     )
 }

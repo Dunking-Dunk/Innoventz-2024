@@ -7,35 +7,35 @@ const Footer = () => {
     return (
         <Container>
             <LinkContainer>
-                {/* <EmailContainer>
+                <EmailContainer>
                     <Title>Stay in touch</Title>
                     <Para>SIGN UP BELOW FOR EXCLUSIVE UPDATES, OFFERS & FUTURE APJ PRODUCTS</Para>
                     <Row>
                         <Input placeholder="Email" />
                         <Btn><AiOutlineArrowRight size={18} /></Btn>
                     </Row>
-                </EmailContainer> */}
-                {/* <QuickLinkContainer>
+                </EmailContainer>
+                <QuickLinkContainer>
                     <Title>Quick link</Title>
                     <LinkList>FAQ</LinkList>
                     <LinkList>CONTACT US</LinkList>
                     <LinkList>Search</LinkList>
-                </QuickLinkContainer> */}
+                </QuickLinkContainer>
                 <SocialContainer>
                     <Title>Let's Connect</Title>
                     <LinkList>Instagram</LinkList>
-                    {/* <LinkList>Facebook</LinkList>
-                    <LinkList>twitter</LinkList> */}
+                    <LinkList>Facebook</LinkList>
+                    <LinkList>twitter</LinkList>
                 </SocialContainer>
             </LinkContainer>
-            {/* <BottomContainer>
+            <BottomContainer>
                 <Para>© 2023, TechStore</Para>
                 <Para>Refund policy</Para>
                 <Para>Privacy policy</Para>
                 <Para>Terms of service</Para>
                 <Para>Shipping policy</Para>
 
-            </BottomContainer> */}
+            </BottomContainer>
         </Container>
     )
 }
