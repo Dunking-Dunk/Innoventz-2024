@@ -16,6 +16,7 @@ import Marque from '../components/Marque/Marque'
 import Gallery from '../components/Gallery/Gallery'
 import Contact from '../components/Contact/Contact'
 import Footer from '../components/Footer/Footer'
+import Footer1 from '../components/Footer/Footer1'
 import Header from '../components/Header/Header'
 import { ScrollManager } from '../components/ScrollManager';
 import Loader from '../components/Loader/Loader';

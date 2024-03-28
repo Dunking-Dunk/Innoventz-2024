@@ -3,7 +3,9 @@
     height: 10rem;
     position: fixed;
     z-index: 10;
-    background-color: transparent;
+    background-color: #282c34;
+    background: linear-gradient(180deg, rgba(40, 44, 52, 1) 0%, rgba(17, 0, 32, .5) 100%);
+    backdrop-filter: blur(7px);
 }
 
 .navbar__container {
