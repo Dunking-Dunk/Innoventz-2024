@@ -17,8 +17,6 @@ import Gallery from '../components/Gallery/Gallery'
 import Contact from '../components/Contact/Contact'
 import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
-import slide_image_2 from '../assets/images/img_2.webp';
-import slide_image_4 from '../assets/images/img_4.webp';
 import { ScrollManager } from '../components/ScrollManager';
 import Loader from '../components/Loader/Loader';
 
@@ -28,7 +26,7 @@ function FaceModel(props) {
     const ref = useRef()
     const modelRef = useRef()
     const { nodes, materials } = useGLTF('./face2/scene.gltf')
-    const { faceColor, eyeColor } = useControls({ faceColor: '#4a00ad', eyeColor: '#ff00e6' })
+    const { faceColor, eyeColor } = useControls({ faceColor: '#ff1992', eyeColor: '#ffffff' })
 
     useGLTF.preload('./face/scene.gltf')
 
@@ -155,11 +153,11 @@ const Interface = (props) => {
             <Marque />
             <Team />
             <Gallery navigate={navigate} >
-                <img src={slide_image_2} alt="slide_image" className='gallery__image' />
-                <img src={slide_image_2} alt="slide_image" className='gallery__image' />
-                <img src={slide_image_4} alt="slide_image" className='gallery__image' />
-                <img src={slide_image_4} alt="slide_image" className='gallery__image' />
-                <img src={slide_image_2} alt="slide_image" className='gallery__image' />
+                <img src={require(`../assets/images/gallery/1.webp`)} alt="slide_image" className='gallery__image' />
+                <img src={require(`../assets/images/gallery/2.webp`)} alt="slide_image" className='gallery__image' />
+                <img src={require(`../assets/images/gallery/3.webp`)} alt="slide_image" className='gallery__image' />
+                <img src={require(`../assets/images/gallery/4.webp`)} alt="slide_image" className='gallery__image' />
+                <img src={require(`../assets/images/gallery/5.webp`)} alt="slide_image" className='gallery__image' />
             </Gallery>
             <Contact />
             <Footer />
@@ -199,9 +197,9 @@ const HomeCanvas = ({ navigate }) => {
                         started && (
                             <Selection autoClear={false}>
                                 <EffectComposer disableNormalPass multisampling={1} >
-                                    <Noise opacity={0.1} />
-                                    {/* <ChromaticAberration blendFunction={BlendFunction.NORMAL}
-                                        offset={[0.005, 0.005]} /> */}
+                                    <Noise opacity={0.2} />
+                                    <ChromaticAberration blendFunction={BlendFunction.NORMAL}
+                                        offset={[0.0015, 0.0015]} />
                                 </EffectComposer>
                                 <Select enabled>
                                     <Particles {...props} size={10}/>

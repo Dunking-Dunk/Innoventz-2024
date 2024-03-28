@@ -28,7 +28,7 @@
     padding: 16rem 5rem;
     display: flex;
     flex-direction: row;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0);
 }
 
 .eventPage__container__imageContainer {
@@ -66,7 +66,7 @@
 }
 
 .eventPage__para {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--primary-color);
     font-weight: 400;
 }
@@ -75,6 +75,16 @@
 
 
 @media screen and (max-width: 770px) {
- 
+    
+    .eventPage__container {
+     flex-direction: column;
+     gap: 4rem;
+    }
+
+    .eventPage__imageContainer__container {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
 
 }

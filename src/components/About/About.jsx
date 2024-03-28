@@ -22,7 +22,7 @@ const About = () => {
 
                             <br></br>
                             <br></br>
-                            About us:
+                            <motion.h3 className='about__card__title' variants={textVariant()}>About Us</motion.h3>
                             The department of Artificial Intelligence and Machine Learning was established at Rajalakshmi Engineering College in the year 2020. The growing demand for these technologies gave rise to the Department of Artificial Intelligence and Data Science in the year 2022. These emerging departments have proved that actions speak louder than words by bringing home tremendous achievements within a short span. The main motive of Rajalakshmi Engineering College is to encourage young minds in these evolving technologies. The esteemed Head of the Department Dr. K. Sekar along with the enthusiastic faculty members are the support system of these budding departments.
                         </motion.p>
                     </div>

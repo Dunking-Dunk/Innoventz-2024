@@ -32,7 +32,7 @@ const Emitter = forwardRef((props, forwardRef) => {
     const [rnd] = useState(() => Math.random())
 
     useFrame((state, dt) => {
-        imageRef.current.material.zoom = 2 + Math.sin(rnd * 10000 + state.clock.elapsedTime / 3) / 2
+        // imageRef.current.material.zoom = 2 + Math.sin(rnd * 10000 + state.clock.elapsedTime / 3) / 2
         if (clicked) {
             easing.damp3(state.camera.position, 1, 10, 2)
         } else {
@@ -41,26 +41,25 @@ const Emitter = forwardRef((props, forwardRef) => {
 
 
     })
-
     return (
         <group {...props} rotation={[0, -1.3, 0]} onClick={() => {
             setClicked(!clicked)
         }}>
-            <mesh ref={forwardRef} scale={[6, GOLDENRATIO * 6, 0.05]}
+            <mesh ref={forwardRef} scale={[8, GOLDENRATIO * 6, 0.05]}
                 position={[-12, -0.2, - 20]}>
                 <planeGeometry />
-                <Image url='https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' ref={imageRef} position={[0, 0, 0.1]} />
+                <Image url={require(`../assets/images/event posters/${props.url}`)} ref={imageRef} position={[0, 0, 0.1]} />
             </mesh>
         </group>
 
     )
 })
 
-function Screen() {
+function Screen({url}) {
     const [material, set] = useState()
     return (
         <>
-            <Emitter ref={set} />
+            <Emitter ref={set} url={url}/>
             {material && (
                 <EffectComposer disableNormalPass multisampling={8}>
                     <GodRays sun={material} exposure={0.5} decay={0.85} blur />
@@ -71,7 +70,7 @@ function Screen() {
     )
 }
 
-const EventCanvas = ({ }) => {
+const EventCanvas = ({url}) => {
 
 
     return (
@@ -83,7 +82,7 @@ const EventCanvas = ({ }) => {
                 <color attach="background" args={['#050505']} />
                 <ambientLight intensity={0.5} />
                 <Floor />
-                <Screen />
+                <Screen url={url}/>
             </Suspense>
             <Preload all />
         </Canvas>

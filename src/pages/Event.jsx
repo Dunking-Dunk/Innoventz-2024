@@ -13,7 +13,7 @@ const Event = () => {
             <Loader started={started} setStarted={setStarted} />
             {started && (
                 <>
-                    <EventCanvas />
+                    <EventCanvas url={'AI ALCHEMY.png'}/>
                     <div className='eventPage__back__container' onClick={() => {
                         navigate(-1)
                     }}>
