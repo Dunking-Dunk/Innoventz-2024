@@ -1,14 +1,14 @@
 import './Team.css'
 import React from "react";
 import Card from './TeamCard/TeamCard'
-import Rissi from '../../assets/images/organisers/Rissi.jpg'
-import Kabilesh from '../../assets/images/organisers/Kabilesh.jpg'
-import Nikitha from '../../assets/images/organisers/Nikitha.jpg'
-import Revatthy from '../../assets/images/organisers/Revatthy.jpg'
-import Pradeepta from '../../assets/images/organisers/Pradeepta.jpg'
-import Sunil from '../../assets/images/organisers/Sunil.jpg'
-import Jay_Shree from '../../assets/images/organisers/Jay Shree.jpg'
-import img from '../../assets/images/img_1.jpg'
+import Rissi from '../../assets/images/organisers/Rissi.webp'
+import Kabilesh from '../../assets/images/organisers/Kabilesh.webp'
+import Nikitha from '../../assets/images/organisers/Nikitha.webp'
+import Revatthy from '../../assets/images/organisers/Revatthy.webp'
+import Pradeepta from '../../assets/images/organisers/Pradeepta.webp'
+import Sunil from '../../assets/images/organisers/Sunil.webp'
+import Jay_Shree from '../../assets/images/organisers/Jay Shree.webp'
+import img from '../../assets/images/img_1.webp'
 import Carousel from '../Carousel/Carousel'
 
 const Team = () => {

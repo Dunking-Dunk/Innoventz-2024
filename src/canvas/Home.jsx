@@ -151,7 +151,6 @@ const Interface = (props) => {
             <Hero />
             <About />
             <Event navigate={navigate} />
-            <Marque />
             <Team />
             <Gallery navigate={navigate} >
                 <img src={require(`../assets/images/gallery/1.webp`)} alt="slide_image" className='gallery__image' />
@@ -223,7 +222,7 @@ const HomeCanvas = ({ navigate }) => {
                         )
                     }
                 </Suspense>
-                
+                <Leva hidden    />
                 <Preload all />
             </Canvas >
 

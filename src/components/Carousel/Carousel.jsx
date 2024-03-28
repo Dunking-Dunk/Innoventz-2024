@@ -9,8 +9,7 @@ import 'swiper/css/navigation';
 
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
-function App({ elements, navigate }) {
-
+function App({ elements}) {
     return (
         <div className="swiper">
             <Swiper
@@ -22,8 +21,8 @@ function App({ elements, navigate }) {
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 0,
-                    depth: 100,
-                    modifier: 2.5,
+                    depth: 50,
+                    modifier: 1,
                 }}
                 pagination={{ el: '.swiper-pagination', clickable: true }}
                 navigation={{
@@ -35,19 +34,13 @@ function App({ elements, navigate }) {
                 className="swiper_container"
             >
                 {elements?.map((ele, key) => {
-                    return <SwiperSlide key={key} onClick={() => {
-                        if (navigate) {
-                            navigate('/event/1')
-                        }
-
-                    }
-                    }>
+                    return <SwiperSlide key={key}>
                         {ele}
                     </SwiperSlide>
                 })}
 
 
-                <div className="slider-controler">
+                {/* <div className="slider-controler">
                     <div className="swiper-button-prev slider-arrow">
                         <ion-icon name="arrow-back-outline"></ion-icon>
                     </div>
@@ -55,7 +48,7 @@ function App({ elements, navigate }) {
                         <ion-icon name="arrow-forward-outline"></ion-icon>
                     </div>
                     <div className="swiper-pagination"></div>
-                </div>
+                </div> */}
             </Swiper>
         </div>
     );
