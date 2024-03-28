@@ -16,6 +16,7 @@ import Marque from '../components/Marque/Marque'
 import Gallery from '../components/Gallery/Gallery'
 import Contact from '../components/Contact/Contact'
 import Footer from '../components/Footer/Footer'
+import Footer1 from '../components/Footer/Footer1'
 import Header from '../components/Header/Header'
 import slide_image_2 from '../assets/images/img_2.webp';
 import slide_image_4 from '../assets/images/img_4.webp';

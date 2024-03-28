@@ -7,7 +7,7 @@ const Contact = () => {
         <div className='contact'>
             <div className='contact__container'>
                 <h1 className='contact__title'>
-                    Proudly Presented by AI ML and AI DS
+                    Proudly Presented by AI  ML and AI  DS
                 </h1>
             </div>
 

@@ -1,0 +1,19 @@
+.footer {
+    padding: 3rem 0;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(10px);
+  }
+  
+  .social-icon {
+    margin-bottom: 1rem;
+  }
+  
+  .social-icon a {
+    margin-right: 1rem;
+  }
+  
+  .social-icon img {
+    width: 30px;
+    height: 30px;
+  }
+  

@@ -1,125 +1,93 @@
 import React from "react";
-import Styled from 'styled-components'
-import { AiOutlineArrowRight } from 'react-icons/ai'
-
+import Styled from 'styled-components';
+import { AiOutlineArrowRight } from 'react-icons/ai';
+import logo from "../../assets/logo.png";
+import instagramIcon from "../../assets/images/nav-icon3.svg";
 
 const Footer = () => {
     return (
         <Container>
             <LinkContainer>
-                <EmailContainer>
-                    <Title>Stay in touch</Title>
-                    <Para>SIGN UP BELOW FOR EXCLUSIVE UPDATES, OFFERS & FUTURE APJ PRODUCTS</Para>
-                    <Row>
-                        <Input placeholder="Email" />
-                        <Btn><AiOutlineArrowRight size={18} /></Btn>
-                    </Row>
-                </EmailContainer>
-                <QuickLinkContainer>
-                    <Title>Quick link</Title>
-                    <LinkList>FAQ</LinkList>
-                    <LinkList>CONTACT US</LinkList>
-                    <LinkList>Search</LinkList>
-                </QuickLinkContainer>
+                <LogoContainer>
+                    <a href="/">
+                    <img src={logo} alt="Logo" />
+                    </a>
+                </LogoContainer>
                 <SocialContainer>
-                    <Title>Let's Connect</Title>
-                    <LinkList>Instagram</LinkList>
-                    <LinkList>Facebook</LinkList>
-                    <LinkList>twitter</LinkList>
+                    {/* <Title>Let's Connect</Title> */}
+                    <LinkList><a href="https://www.instagram.com/innoventzz_rec/"><img src={instagramIcon} alt="Instagram" /></a></LinkList>
                 </SocialContainer>
             </LinkContainer>
             <BottomContainer>
-                <Para>© 2023, TechStore</Para>
-                <Para>Refund policy</Para>
-                <Para>Privacy policy</Para>
-                <Para>Terms of service</Para>
-                <Para>Shipping policy</Para>
-
+                <Para>Innoventz © 2024. All Rights Reserved</Para>
             </BottomContainer>
         </Container>
     )
 }
 
-export default Footer
+export default Footer;
 
 const Container = Styled.div`
-margin-top: 2rem;
+    margin-top: 2rem;
     padding: 3rem 2rem;
-    background-color: transparent;
+    background-color: #282c34;
+    background: linear-gradient(0deg, rgba(40, 44, 52, 1) 0%, rgba(17, 0, 32, .5) 100%);
+    border-radius: .7rem;
+    backdrop-filter: blur(7px);
     width: 100%;
+    font-size: 1.5rem; /* Increase font size */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `
 
 const LinkContainer = Styled.div`
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-height: 25rem;
-
-@media (max-width:600px) {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    height: 100%;
-    gap: 2rem;
-}
+    align-items: center;
+    gap: 4rem; /* Increase the gap between the logo and the Instagram logo */
+    margin-bottom: 3rem;
 `
 
-const EmailContainer = Styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: center;
-`
-
-const Title = Styled.h3`
-font-size: 2rem;
-font-weight: 500;
-text-transform: uppercase;
-margin-bottom: 2rem;
-`
-const Para = Styled.p`
-font-size: 1.5rem;
-font-weight: 400;
-opacity: 0.6;
-margin-bottom: 3rem;
-`
-
-const Row = Styled.div`
-display: flex;
-flex-direction: row;
-align-items: center;
-`
-const Input = Styled.input`
-    width: 30rem;
-    height:4rem;
-`
-const Btn = Styled.button`
-  width: 5rem;
-    height:4rem;
-    background-color: white;
-    cursor: pointer;
-    outline: none;
-`
-
-const QuickLinkContainer = Styled.div`
-    display: flex;
-flex-direction: column;
-gap: 1rem;
-`
-const LinkList = Styled.div`
-margin: 2rem;
+const LogoContainer = Styled.div`
+    img {
+        width: 150px; /* Increase the size of the main logo */
+        height: auto;
+    }
 `
 
 const SocialContainer = Styled.div`
     display: flex;
-flex-direction: column;
-gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+`
+
+const Title = Styled.h3`
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+`
+
+const Para = Styled.p`
+    font-size: 1.5rem;
+    font-weight: 400;
+    opacity: 0.6;
+    margin-bottom: 3rem;
+`
+
+const LinkList = Styled.div`
+    img {
+        width: 30px; /* Adjust as needed */
+        height: auto;
+    }
 `
 
 const BottomContainer = Styled.div`
     width: 100%;
-    height: 3rem;
-    padding: 1rem 1rem;
+    padding: 1rem 0;
     display: flex;
-    flex-direction: row;
-    gap: 2rem
+    justify-content: center;
+    align-items: center;
 `
