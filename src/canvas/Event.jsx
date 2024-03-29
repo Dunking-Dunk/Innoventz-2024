@@ -48,7 +48,7 @@ const Emitter = forwardRef((props, forwardRef) => {
             <mesh ref={forwardRef} scale={[8, GOLDENRATIO * 6, 0.05]}
                 position={[-12, -0.2, - 20]}>
                 <planeGeometry />
-                <Image url={require(`../assets/images/event posters/${props.url}`)} ref={imageRef} position={[0, 0, 0.1]} />
+                <Image url={props.url} ref={imageRef} position={[0, 0, 0.1]} />
             </mesh>
         </group>
 

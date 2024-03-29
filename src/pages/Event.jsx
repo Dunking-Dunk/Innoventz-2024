@@ -18,7 +18,7 @@ const Event = () => {
                 <Loader started={started} setStarted={setStarted} />
                 {started && (
                     <>
-                        {/* <EventCanvas url={event.imgurl}/> */}
+                        <EventCanvas url={event.imgurl}/>
                         <div className='eventPage__back__container' onClick={() => {
                             navigate(-1)
                         }}>
@@ -27,7 +27,7 @@ const Event = () => {
                         <div className='eventPage__container'>
                            <div className='eventPage__container__imageContainer'>
                             <div className='eventPage__imageContainer__container'>
-                            <img className="eventPage__image" src={require("" + event?.imgurl)}/>
+                            <img className="eventPage__image" src={event?.imgurl}/>
                             </div>
            
                            </div>
