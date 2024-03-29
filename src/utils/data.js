@@ -8,7 +8,7 @@ export const events = [
       rounds: "2 rounds",
       prizes: "Top 3",
       teamlim: "Teams of 3 members",
-      imgurl:"../assets/images/event posters/TECHLOCK HOLMES.webp",
+      imgurl: require("../assets/images/event posters/TECHLOCK HOLMES.webp"),
     },
     {
         id: "2",
@@ -19,7 +19,7 @@ export const events = [
         rounds: "2 rounds",
         prizes: "Top 3",
         teamlim: "Teams of 3 members",
-        imgurl:"../assets/images/event posters/AI ALCHEMY.webp",
+        imgurl: require("../assets/images/event posters/AI ALCHEMY.webp"),
       },
       {
         id: "3",
@@ -30,7 +30,7 @@ export const events = [
         rounds: "2 rounds",
         prizes: "Top 3",
         teamlim: "Teams of 2 members",
-        imgurl:"../assets/images/event posters/KIMI NO CODE.webp",
+        imgurl: require("../assets/images/event posters/KIMI NO CODE.webp"),
       },
       {
         id: "4",
@@ -41,7 +41,7 @@ export const events = [
         rounds: "2 rounds",
         prizes: "Top 3",
         teamlim: "Teams of 2 members",
-        imgurl:"../assets/images/event posters/FUSION FORUM.webp",
+        imgurl:require("../assets/images/event posters/FUSION FORUM.webp"),
       },
       {
         id: "5",
@@ -52,7 +52,7 @@ export const events = [
         rounds: "2",
         prizes: "Top 3",
         teamlim: "Solo or Teams of 2 members",
-        imgurl:"../assets/images/event posters/ENIGMA FEST.webp",
+        imgurl:require("../assets/images/event posters/ENIGMA FEST.webp"),
       },
       {
         id: "6",
@@ -63,7 +63,7 @@ export const events = [
         rounds: "2",
         prizes: "Top 3",
         teamlim: "Teams of 3 members",
-        imgurl:"../assets/images/event posters/INTELLEXPO.webp",
+        imgurl:require("../assets/images/event posters/INTELLEXPO.webp"),
       },
       {
         id: "7",
@@ -74,7 +74,7 @@ export const events = [
         rounds: "2",
         prizes: "Top 3",
         teamlim: "Teams of 3 members",
-        imgurl:"../assets/images/event posters/IMPROMPTO.webp",
+        imgurl:require("../assets/images/event posters/IMPROMPTO.webp"),
       },
       {
         id: "8",
@@ -85,7 +85,7 @@ export const events = [
         rounds: "2",
         prizes: "Top 2",
         teamlim: "Teams of 2 members",
-        imgurl:"../assets/images/event posters/MANIFESTO MATRIX.webp",
+        imgurl:require("../assets/images/event posters/MANIFESTO MATRIX.webp"),
       },
       {
         id: "9",
@@ -96,6 +96,6 @@ export const events = [
         rounds: "2",
         prizes: "Top 3",
         teamlim: "Teams of 3 members",
-        imgurl:"../assets/images/event posters/CRYPTIC CONUNDRUMS.webp",
+        imgurl:require("../assets/images/event posters/CRYPTIC CONUNDRUMS.webp"),
       },
   ];

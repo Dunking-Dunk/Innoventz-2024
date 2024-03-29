@@ -32,7 +32,6 @@ const Container = Styled.div`
     padding: 3rem 2rem;
     background-color: #282c34;
     background: linear-gradient(0deg, rgba(40, 44, 52, 1) 0%, rgba(17, 0, 32, .5) 100%);
-    border-radius: .7rem;
     backdrop-filter: blur(7px);
     width: 100%;
     font-size: 1.5rem; /* Increase font size */
