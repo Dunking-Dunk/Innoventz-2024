@@ -11,24 +11,30 @@ import Contact from '../components/Contact/Contact'
 import Footer from '../components/Footer/Footer'
 import BackgroundCanvas from '../canvas/Background'
 import HeroCanvas from '../canvas/Home';
+import Header from '../components/Header/Header';
 
 
 const Home = () => {
-    const navigate = useNavigate()
-
     return (
         <div className='home' >
-            {/* <BackgroundCanvas /> */}
-            <HeroCanvas navigate={navigate} />
-            {/* <Hero />
+            <Header/>
+            <BackgroundCanvas />
+            <HeroCanvas />
+             <Hero />
             <About />
             <Event />
             <Marque />
             <Team />
-            <Gallery />
-            <Contact />
-             */}
-             
+            <h3 className='gallery__title'>Gallery</h3>
+            <Gallery >
+                <img src={require(`../assets/images/gallery/1.webp`)} alt="slide_image" className='gallery__image' />
+                <img src={require(`../assets/images/gallery/2.webp`)} alt="slide_image" className='gallery__image' />
+                <img src={require(`../assets/images/gallery/3.webp`)} alt="slide_image" className='gallery__image' />
+                <img src={require(`../assets/images/gallery/4.webp`)} alt="slide_image" className='gallery__image' />
+                <img src={require(`../assets/images/gallery/5.webp`)} alt="slide_image" className='gallery__image' />
+            </Gallery>
+            <Contact /> 
+            <Footer/>
         </div >
     )
 }

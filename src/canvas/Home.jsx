@@ -23,22 +23,21 @@ import Loader from '../components/Loader/Loader';
 
 
 function FaceModel(props) {
-    const { totalHeight } = props
     const ref = useRef()
     const modelRef = useRef()
-    const { nodes, materials } = useGLTF('./face2/scene.gltf')
+    const { nodes, materials } = useGLTF('./Innov/cute.gltf')
     const { faceColor, eyeColor } = useControls({ faceColor: '#ff1992', eyeColor: '#ffffff' })
 
-    useGLTF.preload('./face/scene.gltf')
+    useGLTF.preload('./Innov/cute.gltf')
 
     const ColorShiftMaterial = shaderMaterial(
         {
             time: 0.0,
             speed: 5.0,
-            charSize: { x: 5, y: 5 },
-            charResolution: 5,
+            charSize: { x: 1, y: 2 },
+            charResolution: 1,
             color: new THREE.Color(faceColor),
-            resolution: { x: 2, y: 2 },
+            resolution: { x: 1, y: 1.5 },
         },
         // vertex shader
         /*glsl*/`
@@ -101,76 +100,86 @@ function FaceModel(props) {
     const scroll = useScroll()
 
     useFrame((state, delta) => {
-        ref.current.time += delta
-        modelRef.current.position.y = - 24 - (scroll.offset * (totalHeight / window.innerHeight) * 6)
-        modelRef.current.rotation.y = 1.3 + (scroll.offset * 0.8)
-        modelRef.current.position.z = -0.5 + (scroll.offset * 0.8)
+        // ref.current.time += delta
+        // modelRef.current.position.y = - 24 - (scroll.offset * ( window.innerHeight) * 6)
+        // modelRef.current.rotation.y = 1.3 + (scroll.offset * 0.8)
+        // modelRef.current.position.z = -0.5 + (scroll.offset * 0.8)
     })
 
     return (
         <Float speed={1} // Animation speed, defaults to 1
-            rotationIntensity={0.2} // XYZ rotation intensity, defaults to 1
+            rotationIntensity={1} // XYZ rotation intensity, defaults to 1
             floatIntensity={1} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
             floatingRange={[-0.4, 0.4]}
-            scale={1} position={[0, 0, 0]} rotation={[0, 0, 0]}>
-            <group {...props} dispose={null} scale={15} position={[0, -24, -0.1]} rotation={[0, 1.3, 0]} ref={modelRef}>
-                <group rotation={[-Math.PI / 2, 0.015, -0.593]}>
-                    <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
-                        <mesh geometry={nodes.eye_low_L_Material002_0.geometry} material={materials['Material.002']} rotation={[-Math.PI / 2, 0, 0]} scale={100} >
-                            <colorShiftMaterial ref={ref} key={ColorShiftMaterial.key} color={new THREE.Color(eyeColor)} />
-                        </mesh>
-                        <mesh geometry={nodes.eye_low_L001_Material002_0.geometry} material={materials['Material.002']} rotation={[-Math.PI / 2, 0, 0]} scale={100} >
-                            <colorShiftMaterial ref={ref} key={ColorShiftMaterial.key} color={new THREE.Color(eyeColor)} />
-                        </mesh>
-                        <mesh geometry={nodes.man_body_0014_uv_map_Material004_0.geometry} material={materials['Material.004']} rotation={[-Math.PI / 2, 0, 0]} scale={100} >
-                            <colorShiftMaterial ref={ref} key={ColorShiftMaterial.key} />
-                        </mesh>
-                    </group>
-                </group>
-            </group>
-        </Float>
+            scale={1} position={[0, 0, 0]} rotation={[0, -0 , 0]}>
+
+        <group {...props} dispose={null} ref={modelRef} >
+        <mesh geometry={nodes.geometry_0001.geometry} material={materials['New Material']}  scale={5}>
+ 
+        </mesh>
+      </group>
+      </Float>
+        // <Float speed={1} // Animation speed, defaults to 1
+        //     rotationIntensity={0.2} // XYZ rotation intensity, defaults to 1
+        //     floatIntensity={1} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
+        //     floatingRange={[-0.4, 0.4]}
+        //     scale={1} position={[0, 0, 0]} rotation={[0, 0, 0]}>
+        //     <group {...props} dispose={null} scale={15} position={[0, -24, -0.1]} rotation={[0, 1.3, 0]} ref={modelRef}>
+        //         <group rotation={[-Math.PI / 2, 0.015, -0.593]}>
+        //             <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+        //                 <mesh geometry={nodes.eye_low_L_Material002_0.geometry} material={materials['Material.002']} rotation={[-Math.PI / 2, 0, 0]} scale={100} >
+        //                     <colorShiftMaterial ref={ref} key={ColorShiftMaterial.key} color={new THREE.Color(eyeColor)} />
+        //                 </mesh>
+        //                 <mesh geometry={nodes.eye_low_L001_Material002_0.geometry} material={materials['Material.002']} rotation={[-Math.PI / 2, 0, 0]} scale={100} >
+        //                     <colorShiftMaterial ref={ref} key={ColorShiftMaterial.key} color={new THREE.Color(eyeColor)} />
+        //                 </mesh>
+        //                 <mesh geometry={nodes.man_body_0014_uv_map_Material004_0.geometry} material={materials['Material.004']} rotation={[-Math.PI / 2, 0, 0]} scale={100} >
+        //                     <colorShiftMaterial ref={ref} key={ColorShiftMaterial.key} />
+        //                 </mesh>
+        //             </group>
+        //         </group>
+        //     </group>
+        // </Float>
 
     )
 }
 useGLTF.preload('./face2/scene.gltf')
 
 
-const Interface = (props) => {
-    const clientRef = useRef()
-    const { navigate, setTotalHeight } = props
+// const Interface = (props) => {
+//     const clientRef = useRef()
+//     const { navigate, setTotalHeight } = props
+    
+//     useEffect(() => {
+//         const resizeObserver = new ResizeObserver(entries => {
+//             setTotalHeight(entries[0].target.clientHeight)
+//         }
+//         )
+//         resizeObserver.observe(clientRef.current)
+//     }, [])
 
-    useEffect(() => {
-        const resizeObserver = new ResizeObserver(entries =>
-            setTotalHeight(entries[0].target.clientHeight)
-        )
-        resizeObserver.observe(clientRef.current)
-    }, [])
-
-    return (
-        <div style={{ width: '100vw', display: 'flex', flexDirection: 'column', height: '100%' }} ref={clientRef} >
-            <Hero />
-            <About />
-            <Event navigate={navigate} />
-            <Team />
-            <Gallery navigate={navigate} >
-                <img src={require(`../assets/images/gallery/1.webp`)} alt="slide_image" className='gallery__image' />
-                <img src={require(`../assets/images/gallery/2.webp`)} alt="slide_image" className='gallery__image' />
-                <img src={require(`../assets/images/gallery/3.webp`)} alt="slide_image" className='gallery__image' />
-                <img src={require(`../assets/images/gallery/4.webp`)} alt="slide_image" className='gallery__image' />
-                <img src={require(`../assets/images/gallery/5.webp`)} alt="slide_image" className='gallery__image' />
-            </Gallery>
-            <Contact />
-            <Footer />
-        </div>
-    )
-}
+//     return (
+//         <div style={{ width: '100vw', display: 'flex', flexDirection: 'column', height: '100%' }} ref={clientRef} >
+//             <Hero />
+//             <About />
+//             <Event navigate={navigate} />
+//             <Team />
+//             <Gallery navigate={navigate} >
+//                 <img src={require(`../assets/images/gallery/1.webp`)} alt="slide_image" className='gallery__image' />
+//                 <img src={require(`../assets/images/gallery/2.webp`)} alt="slide_image" className='gallery__image' />
+//                 <img src={require(`../assets/images/gallery/3.webp`)} alt="slide_image" className='gallery__image' />
+//                 <img src={require(`../assets/images/gallery/4.webp`)} alt="slide_image" className='gallery__image' />
+//                 <img src={require(`../assets/images/gallery/5.webp`)} alt="slide_image" className='gallery__image' />
+//             </Gallery>
+//             <Contact />
+//             <Footer />
+//         </div>
+//     )
+// }
 
 
 
-const HomeCanvas = ({ navigate }) => {
-    const [started, setStarted] = useState(false);
-    const [section, setSection] = useState(0);
-    const [totalHeight, setTotalHeight] = useState(0)
+const HomeCanvas = () => {
     const props = useControls({
         focus: { value: 5.43, min: 3, max: 7, step: 0.01 },
         speed: { value: 62, min: 0.1, max: 100, step: 0.1 },
@@ -180,11 +189,7 @@ const HomeCanvas = ({ navigate }) => {
     })
 
     return (
-        <div style={{ width: '100%', height: '100vh' }}>
-            {
-                started && <Header onSectionChange={setSection} />
-            }
-            <Loader started={started} setStarted={setStarted} />
+        <div style={{ width: '100%', height: '100vh', position: 'absolute' }}>
             <Canvas
                 gl={{ preserveDrawingBuffer: true, antialias: true }}
                 frameloop='always'
@@ -193,34 +198,14 @@ const HomeCanvas = ({ navigate }) => {
             >
                 <ambientLight intensity={10} />
                 <Suspense>
-                    {
-                        started && (
-                            <Selection autoClear={false}>
-                                <EffectComposer disableNormalPass multisampling={1} >
+                                <EffectComposer disableNormalPass multisampling={16} >
                                     <Noise opacity={0.2} />
-                                    <ChromaticAberration blendFunction={BlendFunction.NORMAL}
-                                        offset={[0.0015, 0.0015]} />
+                                    {/* <ChromaticAberration blendFunction={BlendFunction.NORMAL}
+                                        offset={[0.0015, 0.0015]} /> */}
                                 </EffectComposer>
-                                <Select enabled>
                                     <Particles {...props} size={10}/>
-                                    <Plane />
-                                </Select>
-                                <Select>
-                                    <ScrollControls damping={0.1} pages={totalHeight / window.innerHeight} >
-                                        <ScrollManager section={section} onSectionChange={setSection} />
-                                        <Scroll>
-                                            <FaceModel totalHeight={totalHeight} />
+                                    <FaceModel />
 
-                                        </Scroll>
-                                        <Scroll html>
-                                            <Interface setTotalHeight={setTotalHeight} navigate={navigate} />
-                                        </Scroll>
-                                    </ScrollControls>
-                                </Select>
-                            </Selection>
-
-                        )
-                    }
                 </Suspense>
                 
                 <Preload all />

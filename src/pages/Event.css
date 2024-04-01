@@ -29,8 +29,9 @@
     padding: 16rem 5rem;
     display: flex;
     flex-direction: row;
-    background: rgba(0, 0, 0, 0);
-    backdrop-filter: blur(7px);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+
 }
 
 .eventPage__container__imageContainer {
@@ -82,12 +83,20 @@
 .eventPage__type {
     font-size: 2.5rem; /* Increased font size */
     color: var(--primary-color);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .eventPage__icon {
     margin-right: 1rem; /* Adjust spacing between icon and text */
     vertical-align: middle;
+}
+
+.eventPageRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 770px) {

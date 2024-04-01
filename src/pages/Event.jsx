@@ -33,11 +33,23 @@ const Event = () => {
                            </div>
                            <div className="eventPage__details">
                                 <h1 className="eventPage__title">{event?.title}</h1>
-                                <h2 className="eventPage__type">{event?.name}</h2>
-                                <h3 className="eventPage__type">Event Fee: {event?.fee}</h3>
-                                <h3 className="eventPage__type">Number of Rounds: {event?.rounds}</h3>
-                                <h3 className="eventPage__type">Team Limit: {event?.teamlim}</h3>
-                                <h3 className="eventPage__type">Prizes: {event?.prizes}</h3>
+                                <h2 className="eventPage__para">{event?.name}</h2>
+                                <div className='eventPageRow'>
+                                <h3 className="eventPage__para">Event Fee:</h3>
+                                <p className='eventPage__type'> {event?.fee}</p>
+                                </div>
+                                <div className='eventPageRow'>
+                                <h3 className="eventPage__para">Number of Rounds:</h3>
+                                <p className='eventPage__type'>{event?.rounds}</p>
+                                </div>
+                                <div className='eventPageRow'>
+                                <h3 className="eventPage__para">Team Limit:</h3>
+                                <p className='eventPage__type'> {event?.teamlim}</p>
+                                </div>
+                                <div className='eventPageRow'>
+                                <h3 className="eventPage__para">Event Fee:</h3>
+                                <p className='eventPage__type'>  {event?.prizes}</p>
+                                </div>
                                 <p className="eventPage__para">{event?.description}</p>
                             </div>
 {/* 

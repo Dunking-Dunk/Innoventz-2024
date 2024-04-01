@@ -21,8 +21,8 @@ function App({ elements}) {
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 0,
-                    depth: 50,
-                    modifier: 1,
+                    depth: 100,
+                    modifier: 2,
                 }}
                 pagination={{ el: '.swiper-pagination', clickable: true }}
                 navigation={{

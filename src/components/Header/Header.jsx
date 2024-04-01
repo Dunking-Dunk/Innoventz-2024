@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.png'
 import { motion } from 'framer-motion'
 
-export default function Header({ onSectionChange }) {
+export default function Header() {
     const containerRef = useRef()
     const [state, setState] = useState(false)
 
@@ -49,15 +49,15 @@ export default function Header({ onSectionChange }) {
                             </div>
                         </li>
                         <li className="link__container__item">
-                            <a className='link__item__link' onClick={() => onSectionChange(0)} >Home</a></li>
+                            <a className='link__item__link' >Home</a></li>
                         <li className="link__container__item">
-                            <a className='link__item__link' onClick={() => onSectionChange(1)}>About</a></li>
+                            <a className='link__item__link'>About</a></li>
                         <li className="link__container__item" >
-                            <a className='link__item__link' onClick={() => onSectionChange(2)}>Events</a></li>
+                            <a className='link__item__link'>Events</a></li>
                         <li className="link__container__item">
-                            <a className='link__item__link' onClick={() => onSectionChange(4)}>Team</a></li>
+                            <a className='link__item__link'>Team</a></li>
                         <li className="link__container__item">
-                            <a className='link__item__link' onClick={() => onSectionChange(6)}>Gallery</a></li>
+                            <a className='link__item__link'>Gallery</a></li>
                     </ul>
                 </motion.div>
             </div>

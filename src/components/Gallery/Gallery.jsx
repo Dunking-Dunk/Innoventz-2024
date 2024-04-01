@@ -2,16 +2,18 @@ import './Gallery.css'
 import React from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import Button from '../Button/Button';
+import { useNavigate } from 'react-router-dom';
 
-const Gallery = ({ navigate, children, page }) => {
-
+const Gallery = ({ children, page }) => {
+    const navigate = useNavigate()
+    
     return (
         <div className='gallery' id='gallery'>
             <div className='gallery__container'>
-                <h3 className='gallery__title'>Gallery</h3>
+
                 <div className='gallery__images'>
                     <ResponsiveMasonry
-                        columnsCountBreakPoints={{ 750: 1, 900: 5 }}
+                        columnsCountBreakPoints={{ 750: 1, 900: 4 }}
                         style={{ width: '100%', height: '100%' }}
                     >
                         <Masonry>
