@@ -1,7 +1,7 @@
 import './Event.css'
 import React, { useState } from "react";
 import EventCanvas from '../canvas/Event';
-import { AiOutlineClose } from 'react-icons/ai'
+// import { AiOutlineClose } from 'react-icons/ai'
 import { useNavigate } from 'react-router-dom';
 import Loader from '../components/Loader/Loader';
 import { events } from '../utils/data';
@@ -32,12 +32,30 @@ const Event = () => {
            
                            </div>
                            <div className="eventPage__details">
-                                <h1 className="eventPage__title">Title</h1>
-                                <h3 className="eventPage__type">Event Type</h3>
-                                <p className="eventPage__para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A numquam non delectus provident? Accusamus rem harum illo, quia eos laboriosam voluptate dolorum ut eius ipsum, adipisci modi quam soluta dignissimos.
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quibusdam expedita impedit recusandae? Vitae temporibus vero iusto illum, numquam, quasi ipsa eum deserunt dolore eveniet aperiam magnam tenetur quaerat eos?
-                                </p>
-                           </div>
+                                <h1 className="eventPage__title">{event?.title}</h1>
+                                <h2 className="eventPage__type">{event?.name}</h2>
+                                <h3 className="eventPage__type">Event Fee: {event?.fee}</h3>
+                                <h3 className="eventPage__type">Number of Rounds: {event?.rounds}</h3>
+                                <h3 className="eventPage__type">Team Limit: {event?.teamlim}</h3>
+                                <h3 className="eventPage__type">Prizes: {event?.prizes}</h3>
+                                <p className="eventPage__para">{event?.description}</p>
+                            </div>
+{/* 
+                            <div className="team__card">
+                            <img className="team__card__img" src={event?.imgurl} alt="Event" />
+                            <div className="team__card__details">
+                                <h1 className="eventPage__title">{event?.title}</h1>
+                                <div className="eventPage__details">
+                                    <h2 className="eventPage__name">{event?.name}</h2>
+                                    <h3 className="team__card__footer">Event Fee: {event?.fee}</h3>
+                                    <h3 className="team__card__footer">Number of Rounds: {event?.rounds}</h3>
+                                    <h3 className="team__card__footer">Team Limit: {event?.teamlim}</h3>
+                                    <h3 className="team__card__footer">Prizes: {event?.prizes}</h3>
+                                    <p className="team__card__footer">Description: {event?.description}</p>
+                                </div>
+                            </div>
+                        </div> */}
+
                         </div>
                     </>
                 )}

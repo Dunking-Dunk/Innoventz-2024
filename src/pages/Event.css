@@ -11,6 +11,7 @@
     width: 5rem;
     height: 5rem;
     z-index: 10;
+
 }
 
 .eventPage__back {
@@ -29,6 +30,7 @@
     display: flex;
     flex-direction: row;
     background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(7px);
 }
 
 .eventPage__container__imageContainer {
@@ -65,14 +67,28 @@
     text-transform: uppercase;
 }
 
+.eventPage__name {
+    font-size: 3rem;
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
 .eventPage__para {
     font-size: 2rem;
     color: var(--primary-color);
     font-weight: 400;
 }
 
+.eventPage__type {
+    font-size: 2.5rem; /* Increased font size */
+    color: var(--primary-color);
+    font-weight: 500;
+}
 
-
+.eventPage__icon {
+    margin-right: 1rem; /* Adjust spacing between icon and text */
+    vertical-align: middle;
+}
 
 @media screen and (max-width: 770px) {
     
