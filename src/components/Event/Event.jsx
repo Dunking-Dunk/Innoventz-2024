@@ -5,15 +5,15 @@ import { fadeIn } from '../../utils/motion';
 import { motion } from 'framer-motion'
 import sectionWrapper from '../../utils/sectionWrapper'
 
-import slide_image_1 from '../../assets/images/event posters/TECHLOCK HOLMES.png';
-import slide_image_2 from '../../assets/images/event posters/AI ALCHEMY.png';
-import slide_image_3 from '../../assets/images/event posters/KIMI NO CODE.png';
-import slide_image_4 from '../../assets/images/event posters/FUSION FORUM.png';
-import slide_image_5 from '../../assets/images/event posters/ENIGMA FEST.png';
-import slide_image_6 from '../../assets/images/event posters/INTELLEXPO.png';
-import slide_image_7 from '../../assets/images/event posters/IMPROMPTO.png';
-import slide_image_8 from '../../assets/images/event posters/CRYPTIC CONUNDRUMS.png';
-import slide_image_9 from '../../assets/images/event posters/MANIFESTO MATRIX.png';
+import slide_image_1 from '../../assets/images/event posters/TECHLOCK HOLMES.webp';
+import slide_image_2 from '../../assets/images/event posters/AI ALCHEMY.webp';
+import slide_image_3 from '../../assets/images/event posters/KIMI NO CODE.webp';
+import slide_image_4 from '../../assets/images/event posters/FUSION FORUM.webp';
+import slide_image_5 from '../../assets/images/event posters/ENIGMA FEST.webp';
+import slide_image_6 from '../../assets/images/event posters/INTELLEXPO.webp';
+import slide_image_7 from '../../assets/images/event posters/IMPROMPTO.webp';
+import slide_image_8 from '../../assets/images/event posters/CRYPTIC CONUNDRUMS.webp';
+import slide_image_9 from '../../assets/images/event posters/MANIFESTO MATRIX.webp';
 
 const Event = ({ navigate }) => {
 

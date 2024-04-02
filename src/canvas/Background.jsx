@@ -9,7 +9,7 @@ import { useControls } from 'leva'
 
 export const Plane = () => {
   const ref = useRef()
-  const { backgroundColor } = useControls({ backgroundColor: '#ff00c9' })
+  const { backgroundColor } = useControls({ backgroundColor: '#2a004e' })
 
   useFrame((state, delta) => {
     ref.current.uColor = new THREE.Color(backgroundColor)

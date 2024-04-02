@@ -38,9 +38,10 @@
 @media screen and (max-width: 750px) {
     .gallery {
         width: 100%;
-
         padding: 0rem 2rem;
     }
 
-
+    .gallery__images {
+        padding: 0 2rem;
+    }
 }

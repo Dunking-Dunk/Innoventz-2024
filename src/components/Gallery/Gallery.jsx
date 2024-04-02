@@ -11,7 +11,7 @@ const Gallery = ({ navigate, children, page }) => {
                 <h3 className='gallery__title'>Gallery</h3>
                 <div className='gallery__images'>
                     <ResponsiveMasonry
-                        columnsCountBreakPoints={{ 750: 1, 900: 5 }}
+                        columnsCountBreakPoints={{ 750: 1, 900: 4 }}
                         style={{ width: '100%', height: '100%' }}
                     >
                         <Masonry>
