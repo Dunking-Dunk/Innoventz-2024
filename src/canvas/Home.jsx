@@ -167,13 +167,11 @@ const Interface = (props) => {
             <Hero />
             <About />
             <Event navigate={navigate} />
-            <Team />
-            <Gallery navigate={navigate} >
+             <Team />
+           <Gallery navigate={navigate} >
                 <img src={require(`../assets/images/gallery/1.webp`)} alt="slide_image" className='gallery__image' />
-                <img src={require(`../assets/images/gallery/2.webp`)} alt="slide_image" className='gallery__image' />
+                <img src={require(`../assets/images/gallery/2.webp`)} alt="slide_image" className='gallery__image' /> 
                 <img src={require(`../assets/images/gallery/3.webp`)} alt="slide_image" className='gallery__image' />
-                <img src={require(`../assets/images/gallery/4.webp`)} alt="slide_image" className='gallery__image' />
-                <img src={require(`../assets/images/gallery/5.webp`)} alt="slide_image" className='gallery__image' />
             </Gallery>
             <Contact />
             <Footer />

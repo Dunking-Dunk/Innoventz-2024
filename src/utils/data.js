@@ -9,8 +9,7 @@ export const events = [
       prizes: "Top 3",
       teamlim: "Teams of 3 members",
       imgurl: require("../assets/images/event posters/TECHLOCK HOLMES.webp"),
-      rules: "1. The competition consists of 2 rounds, each lasting one hour. <br> 2. The first round will take place on quiz.com. <br> 3. Participants are required to have a mobile device with internet connectivity. <br> 4. Only shortlisted students from the first round will proceed to the final round. <br> 5. The final round will be a buzzer round. <br> 6. The decision of the event coordinators is final. <br> 7. Sharing answers with others will result in elimination. <br> 8. Participants must remain silent during the quiz."
-    
+      rules: "1. The competition consists of 2 rounds, each lasting one hour. <br> 2. The first round will take place on quiz.com. <br> 3. Participants are required to have a mobile device with internet connectivity. <br> 4. Only shortlisted students from the first round will proceed to the final round. <br> 5. The final round will be a buzzer round. <br> 6. The decision of the event coordinators is final. <br> 7. Sharing answers with others will result in elimination. <br> 8. Participants must remain silent during the quiz."    
     },
     {
         id: "2",
