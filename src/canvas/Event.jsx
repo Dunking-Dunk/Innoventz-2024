@@ -74,18 +74,20 @@ const EventCanvas = ({url}) => {
 
 
     return (
-        <Canvas camera={{ position: [-11, 0, 15], fov: 35, near: 1, far: 60 }} style={{ position: 'absolute', width: '100%', height: '100vh', zIndex: 1 }} gl={{ preserveDrawingBuffer: true, antialias: true }}
+
+             <Canvas camera={{ position: [-11, 0, 15], fov: 35, near: 1, far: 60 }} style={{ position: 'absolute', width: '100%', height: '100vh', zIndex: 1 }} gl={{ preserveDrawingBuffer: true, antialias: true }}
             frameloop='always'
             dpr={[1, 1.5]}>
 
             <Suspense>
-                <color attach="background" args={['#050505']} />
+           
                 <ambientLight intensity={0.5} />
                 <Floor />
                 <Screen url={url}/>
             </Suspense>
             <Preload all />
         </Canvas>
+       
 
     )
 }

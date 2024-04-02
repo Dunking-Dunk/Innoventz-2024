@@ -26,19 +26,19 @@ function FaceModel(props) {
     const { totalHeight } = props
     const ref = useRef()
     const modelRef = useRef()
-    const { nodes, materials } = useGLTF('./cute/logo-transformed.glb')
+    const { nodes, materials } = useGLTF('./face2/scene.gltf')
     const { faceColor, eyeColor } = useControls({ faceColor: '#ff1992', eyeColor: '#ffffff' })
 
-    useGLTF.preload('./cute/logo-transformed.glb')
+    useGLTF.preload('./face2/scene.gltf')
 
     const ColorShiftMaterial = shaderMaterial(
         {
             time: 0.0,
-            speed: 5.0,
+            speed: 10.0,
             charSize: { x: 1, y: 2 },
-            charResolution: 2  ,
+            charResolution:5 ,
             color: new THREE.Color(faceColor),
-            resolution: { x: 1.5, y: 2 },
+            resolution: { x: 2, y: 2 },
         },
         // vertex shader
         /*glsl*/`
@@ -102,7 +102,7 @@ function FaceModel(props) {
 
     useFrame((state, delta) => {
         ref.current.time += delta
-        modelRef.current.position.y = - 0  - (scroll.offset * (totalHeight / window.innerHeight) * 6)
+        modelRef.current.position.y = - 24  - (scroll.offset * (totalHeight / window.innerHeight) * 5.5)
         modelRef.current.rotation.y = 1 + (scroll.offset * 0.8)
         modelRef.current.position.z = -0.5 + (scroll.offset * 0.8)
     })
@@ -113,23 +113,23 @@ function FaceModel(props) {
             floatIntensity={1} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
             floatingRange={[-0.4, 0.4]}
             scale={1} position={[0, 0, 0]} rotation={[0, 0, 0]}>
-                   <group {...props} dispose={null}  scale={8} ref={modelRef}>
-      <mesh geometry={nodes['Node_#0'].geometry} material={nodes['Node_#0'].material} position={[0, 0.068, 0.085]} scale={[0.514, 0.61, 0.305]} >
-      <colorShiftMaterial ref={ref} key={ColorShiftMaterial.key} />
-      </mesh>
-      <mesh geometry={nodes['Node_#1'].geometry} material={nodes['Node_#1'].material}  position={[-0.003, -0.256, 0.075]} scale={[0.231, 0.047, 0.336]} />
-      <mesh geometry={nodes['Node_#2'].geometry} material={nodes['Node_#2'].material} position={[0.001, -0.302, 0.078]} scale={[0.121, 0.067, 0.116]} />
-      <mesh geometry={nodes['Node_#3'].geometry} material={nodes['Node_#3'].material} position={[-0.123, 0.086, 0.2]} scale={0.001} >
-        <meshBasicMaterial color='black'/>
+    {/* //                <group {...props} dispose={null}  scale={8} ref={modelRef}>
+    //   <mesh geometry={nodes['Node_#0'].geometry} material={nodes['Node_#0'].material} position={[0, 0.068, 0.085]} scale={[0.514, 0.61, 0.305]} >
+    //   <colorShiftMaterial ref={ref} key={ColorShiftMaterial.key} />
+    //   </mesh>
+    //   <mesh geometry={nodes['Node_#1'].geometry} material={nodes['Node_#1'].material}  position={[-0.003, -0.256, 0.075]} scale={[0.231, 0.047, 0.336]} />
+    //   <mesh geometry={nodes['Node_#2'].geometry} material={nodes['Node_#2'].material} position={[0.001, -0.302, 0.078]} scale={[0.121, 0.067, 0.116]} />
+    //   <mesh geometry={nodes['Node_#3'].geometry} material={nodes['Node_#3'].material} position={[-0.123, 0.086, 0.2]} scale={0.001} >
+    //     <meshBasicMaterial color='black'/>
        
-      </mesh>
-      <mesh geometry={nodes['Node_#6'].geometry} material={nodes['Node_#6'].material} position={[0.136, 0.108, 0.235]} scale={0} />
-      <mesh geometry={nodes['Node_#8'].geometry} material={nodes['Node_#8'].material} scale={0.001} >
+    //   </mesh>
+    //   <mesh geometry={nodes['Node_#6'].geometry} material={nodes['Node_#6'].material} position={[0.136, 0.108, 0.235]} scale={0} />
+    //   <mesh geometry={nodes['Node_#8'].geometry} material={nodes['Node_#8'].material} scale={0.001} >
         
-      </mesh>
-      <mesh geometry={nodes['Node_#11'].geometry} material={nodes['Node_#11'].material} scale={0.001} />
-    </group>
-            {/* <group {...props} dispose={null} scale={15} position={[0, -24, -0.1]} rotation={[0, 1.3, 0]} ref={modelRef}>
+    //   </mesh>
+    //   <mesh geometry={nodes['Node_#11'].geometry} material={nodes['Node_#11'].material} scale={0.001} />
+    // </group> */}
+            <group {...props} dispose={null} scale={15} position={[0, -24, -0.1]} rotation={[0, 1.3, 0]} ref={modelRef}>
                 <group rotation={[-Math.PI / 2, 0.015, -0.593]}>
                     <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
                         <mesh geometry={nodes.eye_low_L_Material002_0.geometry} material={materials['Material.002']} rotation={[-Math.PI / 2, 0, 0]} scale={100} >
@@ -143,7 +143,7 @@ function FaceModel(props) {
                         </mesh>
                     </group>
                 </group>
-            </group> */}
+            </group> 
         </Float>
 
     )
@@ -218,7 +218,7 @@ const HomeCanvas = ({ navigate }) => {
                                         offset={[0.0010, 0.0010]} />
                                 </EffectComposer>
                                 <Select enabled>
-                                    <Particles {...props} size={10}/>
+                                    {/* <Particles {...props} size={200}/> */}
                                     <Plane />
                                 </Select>
                                 <Select>
