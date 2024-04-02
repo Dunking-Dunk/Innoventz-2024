@@ -9,7 +9,11 @@ export const events = [
       prizes: "Top 3",
       teamlim: "Teams of 3 members",
       imgurl: require("../assets/images/event posters/TECHLOCK HOLMES.webp"),
-      rules: "1. The competition consists of 2 rounds, each lasting one hour. <br> 2. The first round will take place on quiz.com. <br> 3. Participants are required to have a mobile device with internet connectivity. <br> 4. Only shortlisted students from the first round will proceed to the final round. <br> 5. The final round will be a buzzer round. <br> 6. The decision of the event coordinators is final. <br> 7. Sharing answers with others will result in elimination. <br> 8. Participants must remain silent during the quiz."    
+      rules: "1. The competition consists of 2 rounds, each lasting one hour. <br> 2. The first round will take place on quiz.com. <br> 3. Participants are required to have a mobile device with internet connectivity. <br> 4. Only shortlisted students from the first round will proceed to the final round. <br> 5. The final round will be a buzzer round. <br> 6. The decision of the event coordinators is final. <br> 7. Sharing answers with others will result in elimination. <br> 8. Participants must remain silent during the quiz.",
+      fc1:"Mrs. R. ANITHA",
+      fc2:"Mrs. Y.NIRMALA ANANDHI",
+      ec1:"HARISH NANDHAN S - 9360759407",
+      ec2:"HARI PRASATH K - 9345444569"
     },
     {
         id: "2",
@@ -21,6 +25,11 @@ export const events = [
         prizes: "Top 3",
         teamlim: "Teams of 3 members",
         imgurl: require("../assets/images/event posters/AI ALCHEMY.webp"),
+        rules: "1. A team can have a maximum of 3 members. Solo participation is allowed. <br> 2. Changes in team details, topics after registration are not encouraged. <br> 3. The abstract of the paper must be uploaded in the form of pdf at the time of registration. <br> 4. The event will be conducted in three rounds: round 1 will be online (the abstract uploaded will be evaluated), round 2 and round 3 will be offline. <br> 5. During round 2: Idea should be presented in the form of ppt for maximum 4 mins (maximum of 15 slides). <br> 6. Abstracts in printed form are a must for candidates selected for round 2. <br> 7. Round 3: The selected candidates must sell their idea to the judges for maximum 5 mins. <br> 8. Time constraints should be strictly followed. <br> 9. Teams/individuals are encouraged to bring their own laptops (not compulsory). <br> 10. Results made by the judges are final. <br> 11. Further details are shared after registration.",
+        fc1:"Dr. INDIRA PRIYA",
+        fc2:"Mrs. RENUGA DEVI",
+        ec1:"ROHIT RAJ T -  9486144394",
+        ec2:"AMUTHA YALINI E - 9884200285"
       },
       {
         id: "3",
@@ -32,6 +41,11 @@ export const events = [
         prizes: "Top 3",
         teamlim: "Teams of 2 members",
         imgurl: require("../assets/images/event posters/KIMI NO CODE.webp"),
+        rules: "1. Participants must solve both elimination round questions to qualify for the main competition. <br> 2. Solutions should be submitted within the specified time frame. <br> 3. The solutions will be evaluated based on correctness and adherence to coding best practices. <br> 4. Rules and regulations for the final round are given only after the first round is completed. <br> 5. Bring your own laptop and ensure you have a reliable internet connection through mobile data or a dongle for the event. <br> 6. Any breaking of rules, violation of guidelines, or engagement in malpractice during the competition will result in immediate disqualification.",
+        fc1:"Mr.B.DEVENDAR RAO",
+        fc2:"Mrs.K.R.SOWMIYA",
+        ec1:"VEJAY SUNDARAM R - 7824874629",
+        ec2:"RANJITH KUMAR S - 9150654888"
       },
       {
         id: "4",
@@ -43,6 +57,11 @@ export const events = [
         prizes: "Top 3",
         teamlim: "Teams of 2 members",
         imgurl:require("../assets/images/event posters/FUSION FORUM.webp"),
+        rules: "1. Each team can have one or two or three members per team. <br> 2. Participants must have their own laptop and internet connections. <br> 3. There will be two rounds conducted. <br> 4. Participants can design either a mobile application or a web application. <br> 5. Designs must be completed within the given time period, and no extra time will be provided. <br> 6. Teams have the freedom to choose any domain for their application in Round - 1. <br> 7. Teams will be assigned a specific domain by the event coordinators in Round - 2.",
+        fc1:"Mr.K.GOPINATH",
+        fc2:"Mr.G.THIYAGARAJAN",
+        ec1:"RAGHAKEERTHANA R - 9940080190",
+        ec2:"KAMALESH S - 9384025215"
       },
       {
         id: "5",
@@ -54,6 +73,11 @@ export const events = [
         prizes: "Top 3",
         teamlim: "Solo or Teams of 2 members",
         imgurl:require("../assets/images/event posters/ENIGMA FEST.webp"),
+        rules: "1. Participants must solve both elimination round questions to qualify for the main competition. <br> 2. Solutions should be submitted within the specified time frame. <br> 3. The solutions will be evaluated based on correctness and adherence to coding best practices. <br> 4. Rules and regulations for the final round are given only after the first round is completed. <br> 5. Bring your own laptop and ensure you have a reliable internet connection through mobile data or a dongle for the event. <br> 6. Any breaking of rules, violation of guidelines, or engagement in malpractice during the competition will result in immediate disqualification.",
+        fc1:"Mrs. S. SREE SUBHA",
+        fc2:"Mrs. M. SHAFIYA BANU",
+        ec1:"VIGNESH K - 8524004120",
+        ec2:"DHANASRI S - 9087921668"
       },
       {
         id: "6",
@@ -65,6 +89,11 @@ export const events = [
         prizes: "Top 3",
         teamlim: "Teams of 3 members",
         imgurl:require("../assets/images/event posters/INTELLEXPO.webp"),
+        rules: "1. Project abstract should be provided beforehand in the specified form. <br> 2. Participants must have their own things required for the project (laptop, charger, other electronics, etc.). <br> 3. The evaluation will be based on creativity, innovation, and novelty of the project. <br> 4. The finished project must be brought to the expo and submitted within the given time. <br> 5. Participants can do projects based on any domains related to AI, ML, DS, or any other computing fields.",
+        fc1:"Mr.G.RAMASUBRAMANIAN",
+        fc2:"Mrs.S.DIVYA",
+        ec1:"NAVEEN KUMAR - 9790953747",
+        ec2:"DHANUSH ISHWAR - 6379595506"
       },
       {
         id: "7",
@@ -76,6 +105,11 @@ export const events = [
         prizes: "Top 3",
         teamlim: "Teams of 3 members",
         imgurl:require("../assets/images/event posters/IMPROMPTO.webp"),
+        rules: "1. All the participants must bring their laptops with good internet connection. <br> 2. A team must comprise of 2 - 3 members. <br> 3. The AI tools to be used and the event flow will be revealed on the event day. <br> 4. Any breaking of rules, violation of guidelines, or engagement in malpractice during the competition will result in immediate disqualification. <br> 5. No prior knowledge of AI tools is required. Guidance will be provided throughout the event. <br> 6. All the participants are welcome to express their fullest involvement.",
+        fc1:"Mrs. S.MAHALAKSHMI",
+        fc2:"Mrs. ADLIN LAYOLA",
+        ec1:"VIGNESH KUMAR - 7806808215",
+        ec2:"LIO GODWIN - 9042996585"
       },
       {
         id: "8",
@@ -87,6 +121,11 @@ export const events = [
         prizes: "Top 2",
         teamlim: "Teams of 2 members",
         imgurl:require("../assets/images/event posters/MANIFESTO MATRIX.webp"),
+        rules: "1. Maximum limit for a team is 2 persons. <br> 2. Time duration: 2 hours (including preparatory time). <br> 3. The participants are allowed to use the internet for the first 15 mins. <br> 4. The mode of presentation will be in paper. So kindly bring the necessary stationery accordingly (charts, markers, color pens, etc.). <br> 5. The topics will be given ON THE SPOT. <br> 6. Plagiarism will not be tolerated. <br> 7. Offensive stuff will lead to termination from the event. <br> 8. The winners will be chosen based on their CREATIVITY and INNOVATION. <br> 9. Only one submission per team will be accepted. <br> 10. Most importantly, don’t hesitate to flaunt your creativity :)",
+        fc1:"Mrs.V.AKSHAYA",
+        fc2:"Mrs.M.MANJU",
+        ec1:"HARSHINI - 90438882485",
+        ec2:"MADHUMITHA K - 8838155465"
       },
       {
         id: "9",
@@ -98,5 +137,10 @@ export const events = [
         prizes: "Top 3",
         teamlim: "Teams of 3 members",
         imgurl:require("../assets/images/event posters/CRYPTIC CONUNDRUMS.webp"),
+        rules: "1. Team can have a minimum of 2 members and maximum of 3 members. <br> 2. The event will be conducted in three rounds: Round 1 and Round 2 will be quiz-like model. Round 3 will be a surprise. <br> 3. Teams shortlisted from Round-2 will be able to participate in Round-3. The teams qualified are expected to give maximum cooperation with the coordinators and team mates. <br> 4. Changes in team details will not be encouraged after registration. <br> 5. The time constraints must be strictly followed for the rounds. <br> 6. Teams are expected to bring a notebook and pen to make notes of clue and alibi. <br> 7. Tampering of clues during gameplay will lead to disqualification of the team. <br> 8. Usage of Mobile phones during gameplay is not encouraged. <br> 9. Damage of props and other decorations will be handled with right repercussions. <br> 10. We expect participants to take the game for fun and immerse themselves to enjoy the gameplay. <br> 11. Further details will be shared after the registration.",
+        fc1:"Mrs.K.SANGEETHA",
+        fc2:"Mrs.JAYASHRI ARCHANA DEVI",
+        ec1:"DEEPTHI R S - 7200560361",
+        ec2:"HEMA MALINI S - 8778961102"
       },
   ];
