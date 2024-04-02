@@ -14,7 +14,6 @@ export const events = [
       fc2:"Mrs. Y.NIRMALA ANANDHI",
       ec1:"HARISH NANDHAN S - 9360759407",
       ec2:"HARI PRASATH K - 9345444569"
-    
     },
     {
         id: "2",
