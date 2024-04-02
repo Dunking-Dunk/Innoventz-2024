@@ -14,53 +14,67 @@ const Event = () => {
     const event = events.find((event) => event.title === id)
     if (event) {
         return (
-            <div className="eventPage">
+            <>
                 <Loader started={started} setStarted={setStarted} />
                 {started && (
-                    <>
-                        <EventCanvas url={event.imgurl}/>
-                        <div className='eventPage__back__container' onClick={() => {
-                            navigate(-1)
-                        }}>
-                            <h1 className='eventPage__back' >X </h1>
-                        </div>
-                        <div className='eventPage__container'>
+                    <div className="eventPage">
+                            <EventCanvas url={event.imgurl}/>
+                         <div className='eventPage__container'>
                            <div className='eventPage__container__imageContainer'>
                             <div className='eventPage__imageContainer__container'>
                             <img className="eventPage__image" src={event?.imgurl}/>
                             </div>
-           
+                            <div className='eventPage__coordinator'>
+                                <div>
+                                <h3 className='eventPage__header'>Event Coordinator</h3>
+                                    <h5 className="eventPage__type">Hursun</h5>
+                                    <h5 className="eventPage__type">Prajein</h5>
+                                </div>
+                                <div>
+                                <h3 className='eventPage__header'>Faculty Coordinator</h3>
+                                    <h5 className="eventPage__type">Hursun</h5>
+                                    <h5 className="eventPage__type">Prajein</h5>
+                                </div>
+                                  
+                            </div>
                            </div>
                            <div className="eventPage__details">
                                 <h1 className="eventPage__title">{event?.title}</h1>
                                 <h2 className="eventPage__type">{event?.name}</h2>
-                                <h3 className="eventPage__type">Event Fee: {event?.fee}</h3>
-                                <h3 className="eventPage__type">Number of Rounds: {event?.rounds}</h3>
-                                <h3 className="eventPage__type">Team Limit: {event?.teamlim}</h3>
-                                <h3 className="eventPage__type">Prizes: {event?.prizes}</h3>
-                                <p className="eventPage__para">{event?.description}</p>
-                            </div>
-{/* 
-                            <div className="team__card">
-                            <img className="team__card__img" src={event?.imgurl} alt="Event" />
-                            <div className="team__card__details">
-                                <h1 className="eventPage__title">{event?.title}</h1>
-                                <div className="eventPage__details">
-                                    <h2 className="eventPage__name">{event?.name}</h2>
-                                    <h3 className="team__card__footer">Event Fee: {event?.fee}</h3>
-                                    <h3 className="team__card__footer">Number of Rounds: {event?.rounds}</h3>
-                                    <h3 className="team__card__footer">Team Limit: {event?.teamlim}</h3>
-                                    <h3 className="team__card__footer">Prizes: {event?.prizes}</h3>
-                                    <p className="team__card__footer">Description: {event?.description}</p>
+                                <div className='eventPage__row'>
+                                    <p className='eventPage__para'>Event fee:</p>
+                                <h3 className="eventPage__type">{event?.fee}</h3>
                                 </div>
+                                <div className='eventPage__row'>
+                                    <p className='eventPage__para'>Number of Rounds: </p>
+                                    <h3 className="eventPage__type">{event?.rounds}</h3>
+                                </div>
+                                <div className='eventPage__row'>
+                                    <p className='eventPage__para'>Team Limit: </p>
+                                <h3 className="eventPage__type">{event?.teamlim}</h3>
+                                </div>
+                                <div className='eventPage__row'>
+                                <p className='eventPage__para'>Prizes: </p>
+                                <h3 className="eventPage__type">{event?.prizes}</h3>
+                                </div>
+                                <p className="eventPage__para">{event?.description}</p>
+                                <h1 className="eventPage__header">Rules and Regulation</h1>
+                                {
+                                    event.rules.split('<br>').map((l) => <p className='eventPage__para'>{l}</p>)
+                                }
                             </div>
-                        </div> */}
-
                         </div>
-                    </>
+                            
+                         <div className='eventPage__back__container' onClick={() => {
+                            navigate(-1)
+                        }}>
+                            <h1 className='eventPage__back' >X </h1>
+                        </div> 
+                       
+                    </div>
                 )}
     
-            </div>
+            </>
         )
     }else return <Loader/>
     
