@@ -7,6 +7,8 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+import { FaChevronLeft , FaChevronRight} from "react-icons/fa";
+
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
 function App({ elements}) {
@@ -40,15 +42,15 @@ function App({ elements}) {
                 })}
 
 
-                {/* <div className="slider-controler">
+                <div className="slider-controler">
                     <div className="swiper-button-prev slider-arrow">
-                        <ion-icon name="arrow-back-outline"></ion-icon>
+                    <FaChevronLeft size={20} color='white'/>
                     </div>
                     <div className="swiper-button-next slider-arrow">
-                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    <FaChevronRight size={20} color='white'/>
                     </div>
                     <div className="swiper-pagination"></div>
-                </div> */}
+                </div>
             </Swiper>
         </div>
     );

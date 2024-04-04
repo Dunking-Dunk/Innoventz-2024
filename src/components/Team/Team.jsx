@@ -8,9 +8,11 @@ import Kabilesh from '../../assets/images/organisers/Kabilesh.webp'
 import Nikitha from '../../assets/images/organisers/Nikitha.webp'
 import Revatthy from '../../assets/images/organisers/Revatthy.webp'
 import Pradeepta from '../../assets/images/organisers/Pradeepta.webp'
+import Harini from '../../assets/images/organisers/Harini G.webp'
+import Thirumalaivasan from '../../assets/images/organisers/Thirumalaivasan V.webp'
+
 import Sunil from '../../assets/images/organisers/Sunil.webp'
 import Jay_Shree from '../../assets/images/organisers/Jay Shree.webp'
-
 import Sekar from '../../assets/images/organisers/Sekar.webp'
 import Manju from '../../assets/images/organisers/Manju.webp'
 import Jeyasri from '../../assets/images/organisers/Jeyasri.webp'
@@ -19,11 +21,12 @@ import SreeSubha from '../../assets/images/organisers/Sree Subha.webp'
 
 const Team = () => {
     const coordinator = [<Card name='Rissi Kumar P' designation='Coordinator' image={Rissi} />, <Card name='Nikitha KR' designation='Coordinator' image={Nikitha} />, <Card name='Pradeepta G' designation='Coordinator' image={Pradeepta}/>,
-        <Card name='Kabilesh S' designation='Coordinator' image={Kabilesh} />,<Card name='Sunil Kumar R' designation='Coordinator' image={Sunil} />]
+        <Card name='Kabilesh S' designation='Coordinator' image={Kabilesh} />,<Card name='Sunil Kumar R' designation='Coordinator' image={Sunil} />, <Card name='Harini' designation='Coordinator' image={Harini} />,<Card name='Thirumalaivasan' designation='Coordinator' image={Thirumalaivasan} />
+    ]
    
-        const faculty_coordinator=[<Card name='Mrs.P.Jayasri' designation='Coordinator' image={Jay_Shree} />,
-                <Card name='Dr.Revatthy Krishnamurthy' designation='Coordinator' image={Revatthy} />,
-                <Card name='Dr.Sekar' designation='HOD' image={Sekar} />,
+        const faculty_coordinator=[ <Card name='Dr.Sekar' designation='Head of the department' image={Sekar} />,
+                <Card name='Dr.Revatthy Krishnamurthy' designation='Organiser' image={Revatthy} />,
+                <Card name='Mrs.P.Jayasri' designation='Coordinator' image={Jay_Shree} />,
                 <Card name='Mrs.Manju' designation='Coordinator' image={Manju} />,
                 <Card name='Mrs.Jeyasri' designation='Coordinator' image={Jeyasri} />,
                 <Card name='Mrs.Reenuka' designation='Coordinator' image={Reenuka} />,

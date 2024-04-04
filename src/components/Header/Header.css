@@ -123,6 +123,23 @@
     display: none;
 }
 
+.menu__line {
+    position: relative;
+    display: block;
+    width: 4rem;
+    height: 0.2rem;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.menu__line:nth-of-type(2) {
+    top: 7px;
+}
+
+.menu__line:nth-of-type(3) {
+    top: 14px;
+}
+
 @media screen and (max-width: 750px) {
     .navbar {
         width: 100%;
@@ -143,9 +160,11 @@
     .navbar__link__container {
         position: fixed;
         width: 70%;
+        height: 100vh;
         left: -100%;
         top: 0;
         background-color: var(--background-color);
+        background: linear-gradient(180deg, rgba(40, 44, 52, 1) 0%, rgba(17, 0, 32, .5) 100%);
         z-index: 5;
         padding: 0rem;
     }
@@ -156,7 +175,7 @@
         align-items: flex-start;
         justify-content: flex-start;
         padding: 2rem;
-        gap: 2rem;
+        gap: 6rem;
     }
 
     .link__container__item {
@@ -176,9 +195,9 @@
         display: block;
         position: absolute;
         left: 3rem;
-        top: 3rem;
+        top: 4rem;
         color: white;
-        z-index: 0;
+        z-index: 20;
     }
 
 

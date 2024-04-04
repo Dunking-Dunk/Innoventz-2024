@@ -27,13 +27,13 @@ const Event = () => {
                             <div className='eventPage__coordinator'>
                                 <div>
                                 <h3 className='eventPage__header'>Event Coordinator</h3>
-                                    <h5 className="eventPage__type">{event?.ec1}</h5>
-                                    <h5 className="eventPage__type">{event?.ec2}</h5>
+                                    <h5 className="eventPage__para">{event?.ec1}</h5>
+                                    <h5 className="eventPage__para">{event?.ec2}</h5>
                                 </div>
                                 <div>
                                 <h3 className='eventPage__header'>Faculty Coordinator</h3>
-                                    <h5 className="eventPage__type">{event?.fc1}</h5>
-                                    <h5 className="eventPage__type">{event.fc2}</h5>
+                                    <h5 className="eventPage__para">{event?.fc1}</h5>
+                                    <h5 className="eventPage__para">{event.fc2}</h5>
                                 </div>
                                   
                             </div>

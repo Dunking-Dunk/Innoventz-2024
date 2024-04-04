@@ -16,7 +16,6 @@ import Marque from '../components/Marque/Marque'
 import Gallery from '../components/Gallery/Gallery'
 import Contact from '../components/Contact/Contact'
 import Footer from '../components/Footer/Footer'
-import Footer1 from '../components/Footer/Footer1'
 import Header from '../components/Header/Header'
 import { ScrollManager } from '../components/ScrollManager';
 import Loader from '../components/Loader/Loader';
@@ -35,10 +34,10 @@ function FaceModel(props) {
         {
             time: 0.0,
             speed: 10.0,
-            charSize: { x: 1, y: 2 },
-            charResolution:5 ,
+            charSize: { x: 10, y: 10 },
+            charResolution:10 ,
             color: new THREE.Color(faceColor),
-            resolution: { x: 2, y: 2 },
+            resolution: { x: 1.5, y: 2 },
         },
         // vertex shader
         /*glsl*/`
@@ -113,22 +112,6 @@ function FaceModel(props) {
             floatIntensity={1} // Up/down float intensity, works like a multiplier with floatingRange,defaults to 1
             floatingRange={[-0.4, 0.4]}
             scale={1} position={[0, 0, 0]} rotation={[0, 0, 0]}>
-    {/* //                <group {...props} dispose={null}  scale={8} ref={modelRef}>
-    //   <mesh geometry={nodes['Node_#0'].geometry} material={nodes['Node_#0'].material} position={[0, 0.068, 0.085]} scale={[0.514, 0.61, 0.305]} >
-    //   <colorShiftMaterial ref={ref} key={ColorShiftMaterial.key} />
-    //   </mesh>
-    //   <mesh geometry={nodes['Node_#1'].geometry} material={nodes['Node_#1'].material}  position={[-0.003, -0.256, 0.075]} scale={[0.231, 0.047, 0.336]} />
-    //   <mesh geometry={nodes['Node_#2'].geometry} material={nodes['Node_#2'].material} position={[0.001, -0.302, 0.078]} scale={[0.121, 0.067, 0.116]} />
-    //   <mesh geometry={nodes['Node_#3'].geometry} material={nodes['Node_#3'].material} position={[-0.123, 0.086, 0.2]} scale={0.001} >
-    //     <meshBasicMaterial color='black'/>
-       
-    //   </mesh>
-    //   <mesh geometry={nodes['Node_#6'].geometry} material={nodes['Node_#6'].material} position={[0.136, 0.108, 0.235]} scale={0} />
-    //   <mesh geometry={nodes['Node_#8'].geometry} material={nodes['Node_#8'].material} scale={0.001} >
-        
-    //   </mesh>
-    //   <mesh geometry={nodes['Node_#11'].geometry} material={nodes['Node_#11'].material} scale={0.001} />
-    // </group> */}
             <group {...props} dispose={null} scale={15} position={[0, -24, -0.1]} rotation={[0, 1.3, 0]} ref={modelRef}>
                 <group rotation={[-Math.PI / 2, 0.015, -0.593]}>
                     <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
@@ -170,8 +153,8 @@ const Interface = (props) => {
              <Team />
            <Gallery navigate={navigate} >
                 <img src={require(`../assets/images/gallery/1.webp`)} alt="slide_image" className='gallery__image' />
-                <img src={require(`../assets/images/gallery/2.webp`)} alt="slide_image" className='gallery__image' /> 
-                <img src={require(`../assets/images/gallery/3.webp`)} alt="slide_image" className='gallery__image' />
+                {/* <img src={require(`../assets/images/gallery/2.webp`)} alt="slide_image" className='gallery__image' />  */}
+                <img src={require(`../assets/images/gallery/8.webp`)} alt="slide_image" className='gallery__image' />
             </Gallery>
             <Contact />
             <Footer />
@@ -194,7 +177,7 @@ const HomeCanvas = ({ navigate }) => {
     })
 
     return (
-        <div style={{ width: '100%', height: '100vh' }}>
+        <div style={{ width: '100%', height: '100dvh' }}>
             {
                 started && <Header onSectionChange={setSection} />
             }
@@ -213,7 +196,7 @@ const HomeCanvas = ({ navigate }) => {
                                 <EffectComposer disableNormalPass multisampling={1} >
                                     <Noise opacity={0.1} />
                                     <ChromaticAberration blendFunction={BlendFunction.NORMAL}
-                                        offset={[0.0010, 0.0010]} />
+                                        offset={[0.0015, 0.0015]} />
                                 </EffectComposer>
                                 <Select enabled>
                                     {/* <Particles {...props} size={200}/> */}
@@ -236,7 +219,7 @@ const HomeCanvas = ({ navigate }) => {
                         )
                     }
                 </Suspense>
-                
+                <Leva hidden/>
                 <Preload all />
             </Canvas >
 

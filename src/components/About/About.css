@@ -20,9 +20,13 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 30rem;
+    width: 80rem;
     height: 50rem;
+}
 
+.about__card__bold {
+    font-weight: 700;
+    font-size: 1.2em;
 }
 
 .about__card__img {
@@ -59,8 +63,11 @@
     .about__card__para {
         font-size: 2.5rem;
     }
-
+    .about__card  {
+        flex-direction: column-reverse;
+    
+    }
     .about__card__img__container {
-        display: none;
+        
     }
 }

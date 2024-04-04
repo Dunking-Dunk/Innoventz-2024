@@ -4,7 +4,8 @@ import { RxHamburgerMenu } from 'react-icons/rx'
 import { AiOutlineClose } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.png'
-import { motion } from 'framer-motion'
+import { motion, transform } from 'framer-motion'
+import { IoClose } from "react-icons/io5";
 
 export default function Header({ onSectionChange }) {
     const containerRef = useRef()
@@ -13,7 +14,7 @@ export default function Header({ onSectionChange }) {
     const helperFunction = () => {
         setState((state) => !state)
     }
-
+ console.log(state)
     const variant = {
         hidden: {
             left: '-100%'
@@ -31,7 +32,9 @@ export default function Header({ onSectionChange }) {
         <div className='navbar'>
             <div className="navbar__container" >
                 <div className="menu" onClick={helperFunction}>
-                    <RxHamburgerMenu size={24} color='white' />
+                <span className='menu__line' style={{transform: state && 'rotate(45deg)', top: state && 3}}></span>
+                <span className='menu__line' style={{width: state && '0px'}}></span>
+                <span className='menu__line' style={{transform: state && 'rotate(-45deg)', top: state && 0}}></span>
                 </div>
                 <div className="navbar__logo__container">
                     <div className="navbar__logo">
@@ -40,10 +43,7 @@ export default function Header({ onSectionChange }) {
                 </div>
                 <motion.div layout className="navbar__link__container" ref={containerRef} variants={variant} animate={state ? 'show' : 'hidden'}>
                     <ul className="link__container__items">
-                        <li className="mobile__container">
-                            <div className="menu" onClick={helperFunction}>
-                                <AiOutlineClose size={24} color='white' />
-                            </div>
+                        <li className="mobile__container">   
                             <div className="navbar__logo">
                                 <img className="navbar__logo__img" src={logo} alt='picture of the person' />
                             </div>
