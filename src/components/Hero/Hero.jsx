@@ -49,7 +49,7 @@ const Hero = () => {
         <div className="hero" id='hero'>
             {/* <HeroCanvas /> */}
             <div className="hero__container">
-                <motion.h1 className='hero__title' whileInView={{ opacity: 1 }} variants={zoomIn(0, 1)} ref={titleRef} data-value="INNOVENTZZ'24">INNOVENTZZ'24</motion.h1>
+                <motion.h1 className='hero__title' whileInView={{ opacity: 1 }} variants={zoomIn(0, 1)} ref={titleRef} data-value="INNOVENTZZ'25">INNOVENTZZ'24</motion.h1>
                 <CountdownTimer />
                 <Button onClick={handleRegisterClick}>Register</Button>
             </div>
