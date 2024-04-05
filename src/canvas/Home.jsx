@@ -219,7 +219,7 @@ const HomeCanvas = ({ navigate }) => {
                         )
                     }
                 </Suspense>
-                
+                <Leva hidden/>
                 <Preload all />
             </Canvas >
 
