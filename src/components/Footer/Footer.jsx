@@ -78,7 +78,7 @@ const Para = Styled.p`
 
 const LinkList = Styled.div`
     img {
-        width: 30px; /* Adjust as needed */
+        width: 50px; /* Adjust as needed */
         height: auto;
     }
 `

@@ -8,8 +8,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 90rem;
+    max-width: 100%;
     height: 100%;
+    flex: 1;
 }
 
 .contact__title {
@@ -20,19 +21,33 @@
     word-spacing: 0.5rem;
 }
 
+.contact__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 10rem  ;
+}
+
 
 @media screen and (max-width: 750px) {
     .contact {
-        padding: 5rem 2rem;
+        padding: 5rem 4rem;
     }
 
     .contact__container {
         justify-content: flex-start;
         width: 100%;
+        flex-direction: column;
+        gap: 5rem;
     }
 
     .contact__title {
-        width: 60rem;
+        width: 100%;
+    }
+
+    .contact__contact {
+        gap: 4rem;
     }
 
 }

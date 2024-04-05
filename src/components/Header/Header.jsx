@@ -58,6 +58,8 @@ export default function Header({ onSectionChange }) {
                             <a className='link__item__link' onClick={() => onSectionChange(4)}>Team</a></li>
                         <li className="link__container__item">
                             <a className='link__item__link' onClick={() => onSectionChange(6)}>Gallery</a></li>
+                            <li className="link__container__item">
+                            <a className='link__item__link' href='mailto:Innoventzz@gmail.com'>Contact</a></li>
                     </ul>
                 </motion.div>
             </div>

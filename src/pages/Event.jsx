@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Loader from '../components/Loader/Loader';
 import { events } from '../utils/data';
 import { useParams } from 'react-router-dom';
+import { IoChevronBack } from "react-icons/io5";
 
 const Event = () => {
     const [started, setStarted] = useState(false);
@@ -60,7 +61,7 @@ const Event = () => {
                                 <p className="eventPage__para">{event?.description}</p>
                                 <h1 className="eventPage__header">Rules and Regulation</h1>
                                 {
-                                    event.rules.split('<br>').map((l) => <p className='eventPage__para'>{l}</p>)
+                                    event.rules.split('<br>').map((l, index) => <p className='eventPage__para' key={index}>{l}</p>)
                                 }
                             </div>
                         </div>
@@ -68,7 +69,8 @@ const Event = () => {
                          <div className='eventPage__back__container' onClick={() => {
                             navigate(-1)
                         }}>
-                            <h1 className='eventPage__back' >X </h1>
+                                           <span className='menu__line' style={{transform: 'rotate(45deg)', top:  2}}></span>
+                <span className='menu__line' style={{transform:'rotate(-45deg)', top:  0}}></span>
                         </div> 
                        
                     </div>

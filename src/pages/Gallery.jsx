@@ -14,7 +14,8 @@ const GalleryPage = () => {
             <div className='eventPage__back__container' onClick={() => {
                 navigate(-1)
             }}>
-                <h1 className='eventPage__back' >X </h1>
+                                                     <span className='menu__line' style={{transform: 'rotate(45deg)', top:  2}}></span>
+                <span className='menu__line' style={{transform:'rotate(-45deg)', top:  0}}></span>
             </div>
             <Gallery page={true} >
             <LazyLoadImage    src={require(`../assets/images/gallery/1.webp`)} alt="slide_image" className='gallery__image' />

@@ -14,14 +14,15 @@ const About = () => {
 
                 <div className='about__card'>
                     {/* <motion.div variants={slideIn("left", "ease", 0, 1)} className='about__card__img__container'>
-                        <img src={logo} className='about__card__img' />
+                     
                     </motion.div> */}
                     <div className='about__card__img__container'>
                     <Logo/>
                     </div>
                  
                     <div className='about__card__sub'>
-                        <motion.h3 className='about__card__title' variants={textVariant()}>INNOVENTZZ'24</motion.h3>
+                    <img src={logo} className='about__card__img' />
+                        {/* <motion.h3 className='about__card__title' variants={textVariant()}>INNOVENTZZ'24</motion.h3> */}
                         <motion.p className='about__card__para' variants={textVariant()}>
                             Welcome to <span className='about__card__bold'>Innoventzz</span>, an intellectually stimulating symposium hosted by the  <span className='about__card__bold'>Department of Artificial Intelligence and Machine Learning </span> dynamically together with the <span className='about__card__bold'> Department of Artificial Intelligence and Data Science </span>. Innoventzz is more than just a gathering; it's a celebration of the trailblazing advancements and limitless possibilities within the realms of AI, Machine Learning and Data Science. You are at the right place to flaunt your innovations and creativity. Gear up yourselves for a thought - <span className='about__card__bold'>provoking experience from INNOVENTZZ’24. </span>
                             <br></br>

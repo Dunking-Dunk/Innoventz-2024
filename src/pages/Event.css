@@ -6,13 +6,13 @@
 }
 
 .eventPage__back__container {
-    position: absolute;
+    position: fixed;
     left: 5rem;
     top: 5rem;
     width: 5rem;
     height: 5rem;
     z-index: 10;
-
+    cursor: pointer;
 }
 
 .eventPage__back {
@@ -27,7 +27,7 @@
     padding: 16rem 5rem;
     display: flex;
     flex-direction: row;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.3);
     backdrop-filter: blur(1px);
     position: relative;
     z-index: 5;

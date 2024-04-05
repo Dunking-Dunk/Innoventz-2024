@@ -30,9 +30,11 @@
 }
 
 .about__card__img {
-    width: 33.75rem;
+    width: 45rem;
+    justify-self: flex-start;
+    object-fit: contain;
     height: 8.625rem;
-    transform: rotate(-90deg);
+
 }
 
 .about__card__sub {

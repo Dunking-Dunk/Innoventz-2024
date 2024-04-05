@@ -26,18 +26,18 @@ function FaceModel(props) {
     const ref = useRef()
     const modelRef = useRef()
     const { nodes, materials } = useGLTF('./face2/scene.gltf')
-    const { faceColor, eyeColor } = useControls({ faceColor: '#ff1992', eyeColor: '#ffffff' })
+    const { faceColor, eyeColor } = useControls({ faceColor: '#ff00ef', eyeColor: '#ffffff' })
 
     useGLTF.preload('./face2/scene.gltf')
 
     const ColorShiftMaterial = shaderMaterial(
         {
             time: 0.0,
-            speed: 10.0,
+            speed: 20.0,
             charSize: { x: 10, y: 10 },
             charResolution:10 ,
             color: new THREE.Color(faceColor),
-            resolution: { x: 1.5, y: 2 },
+            resolution: { x: 2, y: 2 },
         },
         // vertex shader
         /*glsl*/`
@@ -219,7 +219,7 @@ const HomeCanvas = ({ navigate }) => {
                         )
                     }
                 </Suspense>
-                <Leva hidden/>
+                
                 <Preload all />
             </Canvas >
 

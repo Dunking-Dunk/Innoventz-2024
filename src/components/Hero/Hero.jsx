@@ -42,7 +42,7 @@ const Hero = () => {
 
     const handleRegisterClick = () => {
         // Navigate to google.com
-        window.location.href = 'https://forms.gle/9y6FbowCqLyTmb8j7';
+        window.location.href = 'https://forms.gle/WXgsuPiG1TwSzpHX9';
     };
 
     return (

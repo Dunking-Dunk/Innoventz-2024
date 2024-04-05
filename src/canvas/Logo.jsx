@@ -15,7 +15,7 @@ const LogoModel = (props) => {
              <meshBasicMaterial>
     <GradientTexture
       stops={[0, 1]} // As many stops as you want
-      colors={['#f953c6', '#b91d73']} // Colors need to match the number of stops
+      colors={['#af00ff', '#2a004e']} // Colors need to match the number of stops
       size={1024} // Size is optional, default = 1024
     />
     </meshBasicMaterial>
