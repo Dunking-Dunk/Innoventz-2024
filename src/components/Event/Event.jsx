@@ -21,15 +21,15 @@ const Event = ({ navigate }) => {
         navigate(link)
     }
 
-    const technicalEvent = [<img src={slide_image_1} alt="slide_image" className='swiper-slide_img' onClick={() => handleLink('/event/Techlock Holmes')}/>, 
-            <img src={slide_image_2} alt="slide_image" className='swiper-slide_img'  onClick={() => handleLink('/event/AI Alchemy')}/>, 
-            <img src={slide_image_3} alt="slide_image" className='swiper-slide_img'  onClick={() => handleLink('/event/Kimi No Code')}/>, 
-            <img src={slide_image_4} alt="slide_image" className='swiper-slide_img'  onClick={() => handleLink('/event/Fusion Forum')}/>, 
-            <img src={slide_image_5} alt="slide_image" className='swiper-slide_img'  onClick={() => handleLink('/event/Enigma Fest')}/>,
-            <img src={slide_image_6} alt="slide_image" className='swiper-slide_img'  onClick={() => handleLink('/event/IntelleXpo')}/>,
-            <img src={slide_image_7} alt="slide_image" className='swiper-slide_img'  onClick={() => handleLink('/event/Imprompto')}/>,
-            <img src={slide_image_8} alt="slide_image" className='swiper-slide_img'  onClick={() => handleLink('/event/Manifesto Matrix')}/>,
-            <img src={slide_image_9} alt="slide_image" className='swiper-slide_img'  onClick={() => handleLink('/event/Cryptic Conundrums')} />,]
+    const technicalEvent = [<img src={slide_image_1} alt="slide_image" className='swiper-slide_img' onClick={() => handleLink('/event/Techlock Holmes')} />,
+    <img src={slide_image_2} alt="slide_image" className='swiper-slide_img' onClick={() => handleLink('/event/AI Alchemy')} />,
+    <img src={slide_image_3} alt="slide_image" className='swiper-slide_img' onClick={() => handleLink('/event/Kimi No Code')} />,
+    <img src={slide_image_4} alt="slide_image" className='swiper-slide_img' onClick={() => handleLink('/event/Fusion Forum')} />,
+    <img src={slide_image_5} alt="slide_image" className='swiper-slide_img' onClick={() => handleLink('/event/Enigma Fest')} />,
+    <img src={slide_image_6} alt="slide_image" className='swiper-slide_img' onClick={() => handleLink('/event/IntelleXpo')} />,
+    <img src={slide_image_7} alt="slide_image" className='swiper-slide_img' onClick={() => handleLink('/event/Imprompto')} />,
+    <img src={slide_image_8} alt="slide_image" className='swiper-slide_img' onClick={() => handleLink('/event/Manifesto Matrix')} />,
+    <img src={slide_image_9} alt="slide_image" className='swiper-slide_img' onClick={() => handleLink('/event/Cryptic Conundrums')} />,]
 
     const handleRegisterClick = () => {
         // Navigate to google.com
@@ -39,8 +39,8 @@ const Event = ({ navigate }) => {
     return (
         <div className='event' id='event'>
             <div className='event__container'>
-                <motion.h2 variants={fadeIn("right", "ease", 0, 1)} className='event__sub__title'>Events</motion.h2>
-                <Carousel elements={technicalEvent}/>
+                <motion.h2 variants={fadeIn("right", "ease", 0, 1)} className='event__sub__title'>Events <span style={{ fontSize: '2rem' }}>(click the image for event details)</span></motion.h2>
+                <Carousel elements={technicalEvent} />
             </div>
         </div>
     )

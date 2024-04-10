@@ -35,7 +35,7 @@ function FaceModel(props) {
             time: 0.0,
             speed: 20.0,
             charSize: { x: 10, y: 10 },
-            charResolution:10 ,
+            charResolution: 10,
             color: new THREE.Color(faceColor),
             resolution: { x: 2, y: 2 },
         },
@@ -101,7 +101,7 @@ function FaceModel(props) {
 
     useFrame((state, delta) => {
         ref.current.time += delta
-        modelRef.current.position.y = - 24  - (scroll.offset * (totalHeight / window.innerHeight) * 5.5)
+        modelRef.current.position.y = - 24 - (scroll.offset * (totalHeight / window.innerHeight) * 5.5)
         modelRef.current.rotation.y = 1 + (scroll.offset * 0.8)
         modelRef.current.position.z = -0.5 + (scroll.offset * 0.8)
     })
@@ -126,7 +126,7 @@ function FaceModel(props) {
                         </mesh>
                     </group>
                 </group>
-            </group> 
+            </group>
         </Float>
 
     )
@@ -150,8 +150,22 @@ const Interface = (props) => {
             <Hero />
             <About />
             <Event navigate={navigate} />
-             <Team />
-           <Gallery navigate={navigate} >
+
+            <div style={{
+                display: 'flex',
+                padding: '4rem 10rem',
+                gap: '4rem',
+                flexDirection: 'column'
+            }}>
+                <h2 className='event__sub__title'>Slot</h2>
+                <div className='shedule__container'>
+                    <img src={require(`../assets/images/1.webp`)} className='shedule__image' />
+                    <img src={require(`../assets/images/2.webp`)} className='shedule__image' />
+                </div>
+            </div>
+
+            <Team />
+            <Gallery navigate={navigate} >
                 <img src={require(`../assets/images/gallery/1.webp`)} alt="slide_image" className='gallery__image' />
                 {/* <img src={require(`../assets/images/gallery/2.webp`)} alt="slide_image" className='gallery__image' />  */}
                 <img src={require(`../assets/images/gallery/8.webp`)} alt="slide_image" className='gallery__image' />
@@ -196,7 +210,7 @@ const HomeCanvas = ({ navigate }) => {
                                 <EffectComposer disableNormalPass multisampling={1} >
                                     <Noise opacity={0.1} />
                                     <ChromaticAberration blendFunction={BlendFunction.NORMAL}
-                                        offset={[0.0015, 0.0015]} />
+                                        offset={[0.001, 0.001]} />
                                 </EffectComposer>
                                 <Select enabled>
                                     {/* <Particles {...props} size={200}/> */}
@@ -219,7 +233,7 @@ const HomeCanvas = ({ navigate }) => {
                         )
                     }
                 </Suspense>
-                <Leva hidden/>
+                <Leva hidden />
                 <Preload all />
             </Canvas >
 

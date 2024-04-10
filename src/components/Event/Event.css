@@ -24,6 +24,9 @@
 }
 
 .event__sub__title {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
     font-size: 6rem;
     text-transform: uppercase;
 }

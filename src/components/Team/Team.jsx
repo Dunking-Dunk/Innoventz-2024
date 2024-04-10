@@ -20,18 +20,17 @@ import Reenuka from '../../assets/images/organisers/Reenuka.webp'
 import SreeSubha from '../../assets/images/organisers/Sree Subha.webp'
 
 const Team = () => {
-    const coordinator = [<Card name='Rissi Kumar P' designation='Coordinator' image={Rissi} />, <Card name='Nikitha KR' designation='Coordinator' image={Nikitha} />, <Card name='Pradeepta G' designation='Coordinator' image={Pradeepta}/>,
-        <Card name='Kabilesh S' designation='Coordinator' image={Kabilesh} />,<Card name='Sunil Kumar R' designation='Coordinator' image={Sunil} />, <Card name='Harini' designation='Coordinator' image={Harini} />,<Card name='Thirumalaivasan' designation='Coordinator' image={Thirumalaivasan} />
+    const coordinator = [<Card name='Rissi Kumar P' designation='Coordinator' image={Rissi} />, <Card name='Nikitha KR' designation='Coordinator' image={Nikitha} />, <Card name='Pradeepta G' designation='Coordinator' image={Pradeepta} />,
+    <Card name='Kabilesh S' designation='Coordinator' image={Kabilesh} />, <Card name='Sunil Kumar R' designation='Coordinator' image={Sunil} />, <Card name='Harini' designation='Coordinator' image={Harini} />, <Card name='Thirumalaivasan' designation='Coordinator' image={Thirumalaivasan} />
     ]
-   
-        const faculty_coordinator=[ <Card name='Dr.Sekar' designation='Head of the department' image={Sekar} />,
-                <Card name='Dr.Revatthy Krishnamurthy' designation='Organiser' image={Revatthy} />,
-                <Card name='Mrs.P.Jayasri' designation='Coordinator' image={Jay_Shree} />,
-                <Card name='Mrs.Manju' designation='Coordinator' image={Manju} />,
-                <Card name='Mrs.Jeyasri' designation='Coordinator' image={Jeyasri} />,
-                <Card name='Mrs.Reenuka' designation='Coordinator' image={Reenuka} />,
-                <Card name='Mrs.Sree Subha' designation='Coordinator' image={SreeSubha} />,
-            ]
+
+    const faculty_coordinator = [<Card name='Dr.Sekar' designation='Head of the department' image={Sekar} />,
+    <Card name='Dr.Revatthy Krishnamurthy' designation='Organiser' image={Revatthy} />,
+    <Card name='Mrs.Manju' designation='Coordinator' image={Manju} />,
+    <Card name='Mrs.Jeyasri' designation='Coordinator' image={Jeyasri} />,
+    <Card name='Mrs.Reenuka' designation='Coordinator' image={Reenuka} />,
+    <Card name='Mrs.Sree Subha' designation='Coordinator' image={SreeSubha} />,
+    ]
     return (
         <div className='team' id='team'>
             <div className='team__container'>

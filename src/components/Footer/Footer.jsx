@@ -10,7 +10,7 @@ const Footer = () => {
             <LinkContainer>
                 <LogoContainer>
                     <a href="/">
-                    <img src={logo} alt="Logo" />
+                        <img src={logo} alt="Logo" />
                     </a>
                 </LogoContainer>
                 <SocialContainer>
@@ -21,6 +21,15 @@ const Footer = () => {
             <BottomContainer>
                 <Para>Innoventz © 2024. All Rights Reserved</Para>
             </BottomContainer>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <LogoContainer>
+                    <p>Website Developed By</p>
+                </LogoContainer>
+                <SocialContainer>
+                    <LinkList><a href="https://www.linkedin.com/in/hursun-ss-377659233/">Hursun</a></LinkList>
+                    <LinkList><a href="https://www.linkedin.com/in/prajeinck/">Prajein</a></LinkList>
+                </SocialContainer>
+            </div>
         </Container>
     )
 }
@@ -43,7 +52,9 @@ const Container = Styled.div`
 
 const LinkContainer = Styled.div`
     display: flex;
+    width: 100%;
     align-items: center;
+    justify-content: center;
     gap: 4rem; /* Increase the gap between the logo and the Instagram logo */
     margin-bottom: 3rem;
 `
@@ -77,11 +88,18 @@ const Para = Styled.p`
 `
 
 const LinkList = Styled.div`
-    img {
-        width: 50px; /* Adjust as needed */
-        height: auto;
+img {
+    width:8rem;
+    height: 8rem;
+}
+    a{
+        color: white;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 600;
     }
 `
+
 
 const BottomContainer = Styled.div`
     width: 100%;
