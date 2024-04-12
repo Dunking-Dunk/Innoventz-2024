@@ -29,10 +29,11 @@ body {
 
 ::-webkit-scrollbar {
   width: 0.5rem;
+  background-color: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #000000;
+  background-color: #ffffff;
   border-radius: 1rem;
 }
 

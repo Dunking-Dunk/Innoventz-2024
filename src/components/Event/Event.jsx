@@ -28,8 +28,8 @@ const Event = ({ navigate }) => {
     <img src={slide_image_5} alt="slide_image" className='swiper-slide_img' onClick={() => handleLink('/event/Enigma Fest')} />,
     <img src={slide_image_6} alt="slide_image" className='swiper-slide_img' onClick={() => handleLink('/event/IntelleXpo')} />,
     <img src={slide_image_7} alt="slide_image" className='swiper-slide_img' onClick={() => handleLink('/event/Imprompto')} />,
-    <img src={slide_image_8} alt="slide_image" className='swiper-slide_img' onClick={() => handleLink('/event/Manifesto Matrix')} />,
-    <img src={slide_image_9} alt="slide_image" className='swiper-slide_img' onClick={() => handleLink('/event/Cryptic Conundrums')} />,]
+    <img src={slide_image_9} alt="slide_image" className='swiper-slide_img' onClick={() => handleLink('/event/Manifesto Matrix')} />,
+    <img src={slide_image_8} alt="slide_image" className='swiper-slide_img' onClick={() => handleLink('/event/Cryptic Conundrums')} />,]
 
     const handleRegisterClick = () => {
         // Navigate to google.com

@@ -15,3 +15,26 @@
     height: 70rem;
     object-fit: contain;
 }
+
+.shedule__slot {
+    display: flex;
+    padding: 4rem 10rem;
+    gap: 4rem;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 750px) {
+    .shedule__slot {
+        padding: 2rem;
+        gap: 1rem;
+    }
+
+    .shedule__container {
+        flex-direction: column;
+    }
+
+    .shedule__image {
+        width: 100%;
+        object-fit: contain;
+    }
+}

@@ -151,12 +151,7 @@ const Interface = (props) => {
             <About />
             <Event navigate={navigate} />
 
-            <div style={{
-                display: 'flex',
-                padding: '4rem 10rem',
-                gap: '4rem',
-                flexDirection: 'column'
-            }}>
+            <div className='shedule__slot' >
                 <h2 className='event__sub__title'>Slot</h2>
                 <div className='shedule__container'>
                     <img src={require(`../assets/images/1.webp`)} className='shedule__image' />

@@ -11,6 +11,7 @@ import Pradeepta from '../../assets/images/organisers/Pradeepta.webp'
 import Harini from '../../assets/images/organisers/Harini G.webp'
 import Thirumalaivasan from '../../assets/images/organisers/Thirumalaivasan V.webp'
 
+import Arulkumaran from '../../assets/images/organisers/Arulkumaran.P.jpg'
 import Sunil from '../../assets/images/organisers/Sunil.webp'
 import Jay_Shree from '../../assets/images/organisers/Jay Shree.webp'
 import Sekar from '../../assets/images/organisers/Sekar.webp'
@@ -21,7 +22,8 @@ import SreeSubha from '../../assets/images/organisers/Sree Subha.webp'
 
 const Team = () => {
     const coordinator = [<Card name='Rissi Kumar P' designation='Coordinator' image={Rissi} />, <Card name='Nikitha KR' designation='Coordinator' image={Nikitha} />, <Card name='Pradeepta G' designation='Coordinator' image={Pradeepta} />,
-    <Card name='Kabilesh S' designation='Coordinator' image={Kabilesh} />, <Card name='Sunil Kumar R' designation='Coordinator' image={Sunil} />, <Card name='Harini' designation='Coordinator' image={Harini} />, <Card name='Thirumalaivasan' designation='Coordinator' image={Thirumalaivasan} />
+    <Card name='Kabilesh S' designation='Coordinator' image={Kabilesh} />, <Card name='Sunil Kumar R' designation='Coordinator' image={Sunil} />, <Card name='Harini' designation='Coordinator' image={Harini} />, <Card name='Thirumalaivasan' designation='Coordinator' image={Thirumalaivasan} />,
+    <Card name='Arulkumaran' designation='Coordinator' image={Arulkumaran} />
     ]
 
     const faculty_coordinator = [<Card name='Dr.Sekar' designation='Head of the department' image={Sekar} />,
