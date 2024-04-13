@@ -155,7 +155,7 @@ const Interface = (props) => {
                 <h2 className='event__sub__title'>Slot</h2>
                 <div className='shedule__container'>
                     <img src={require(`../assets/images/1.webp`)} className='shedule__image' />
-                    <img src={require(`../assets/images/2.webp`)} className='shedule__image' />
+                    <img src={require(`../assets/images/3.webp`)} className='shedule__image' />
                 </div>
             </div>
 

@@ -6,6 +6,7 @@
     background-color: #282c34;
     background: linear-gradient(0deg, rgba(40, 44, 52, 1) 0%, rgba(17, 0, 32, .5) 100%);
     height: 100%;
+    min-height: 50rem;
     box-shadow: 0 7px 20px 5px #00000088;
     border-radius: .7rem;
     backdrop-filter: blur(7px);
@@ -49,7 +50,9 @@
     border-radius: 50%;
 }
 
+
 .team__card__name {
+    
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
